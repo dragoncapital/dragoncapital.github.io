@@ -189,8 +189,8 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 
 .dragon-building img { display: block;}
 
-.dcc-container { position: relative; overflow: hidden; transition:transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s -webkit-transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s;}
-.dcc-container.launched { transition:transform cubic-bezier(.48,0,.8,.28) 8s -webkit-transform cubic-bezier(.48,0,.8,.28) 8s;}
+.dcc-container { position: relative; overflow: hidden; -webkit-transition:transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s;}
+.dcc-container.launched { -webkit-transition:transform cubic-bezier(.48,0,.8,.28) 8s; transition:transform cubic-bezier(.48,0,.8,.28) 8s;}
 
 .floor-separator { height:50px; background:url(../img/floor-separator.jpg) repeat left center}
 .sky-separator { height:200%; height:200vh; background:url(../img/sky-separator.jpg) repeat center}
