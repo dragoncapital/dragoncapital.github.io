@@ -23,7 +23,7 @@ jQdcc(document).ready(function($){
 				$('.dcc-container').addClass('launched');
 				$('.rocket-holder').addClass('active');
 			}
-			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
+			$('.dcc-container').css({'-webkit-transform':'translateY('+calcY(state)+'px)', 'transform':'translateY('+calcY(state)+'px)'});
 		}
 		if(state==6){
 			setTimeout(function(e){
@@ -45,7 +45,7 @@ jQdcc(document).ready(function($){
 			state--;
 			$('body').attr('data-state',state);
 			$('.dcc-nav').addClass('disabled');
-			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
+			$('.dcc-container').css({'-webkit-transform':'translateY('+calcY(state)+'px)','transform':'translateY('+calcY(state)+'px)'});
 		}
 		setTimeout(function(e){
 			$('.dcc-nav').removeClass('disabled');
