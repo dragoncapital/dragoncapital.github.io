@@ -190,7 +190,7 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 .dragon-building img { display: block;}
 
 .dcc-container { position: relative; overflow: hidden; transition:transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s;}
-.dcc-container.launched { transition:transform cubic-bezier(.48,0,.7,.28) 7s;}
+.dcc-container.launched { transition:transform cubic-bezier(.48,0,.8,.28) 8s;}
 
 .floor-separator { height:50px; background:url(../img/floor-separator.jpg) repeat left center}
 .sky-separator { height:200%; height:200vh; background:url(../img/sky-separator.jpg) repeat center}
@@ -439,6 +439,6 @@ a.btn-begin { width:120px; height:120px; display:inline-block;}
 .btn-launch { width:102px; height:102px; position: absolute; top:26%; left:50%; margin-left:-56px;}
 .btn-launch span { position:relative; z-index:5; text-indent:-9999px; display: block; width:102px; height:102px; background: url(../img/launch-button.png) no-repeat center; background-size:cover;}
 
-.rocket-holder.active { transform:translateY(-2448px) scale(0); opacity: .9; transition:all 6.5s cubic-bezier(.98,0,.6,.28);}
+.rocket-holder.active { transform:translateY(-2648px) scale(0); opacity: .9; transition:all 6.5s cubic-bezier(.98,0,.9,.88);}
 
 #dcc-rooftop { overflow:visible;}
