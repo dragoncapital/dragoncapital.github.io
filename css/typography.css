@@ -1,0 +1,177 @@
+/* Typography */
+a
+{
+    line-height: inherit;
+
+    text-decoration: none;
+
+    color: #2196f3;
+}
+a:hover,
+a:focus
+{
+    color: #1976d2;
+}
+a img
+{
+    border: none;
+}
+
+p
+{
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+
+    margin-bottom: 1.25rem;
+
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.4;
+
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+
+    color: #000;
+
+    text-rendering: optimizeLegibility;
+}
+
+h1
+{
+    font-size: 2.125rem;
+}
+
+h2
+{
+    font-size: 1.6875rem;
+}
+
+h3
+{
+    font-size: 1.375rem;
+}
+
+h4
+{
+    font-size: 1.125rem;
+}
+
+h5
+{
+    font-size: 1.125rem;
+}
+
+h6
+{
+    font-size: 1rem;
+}
+
+hr
+{
+    clear: both;
+
+    height: 0;
+    margin: 1.25rem 0 1.1875rem;
+
+    border: solid #ddd;
+    border-width: 1px 0 0;
+}
+
+em,
+i
+{
+    font-style: italic;
+    line-height: inherit;
+}
+
+strong,
+b
+{
+    font-weight: bold;
+    line-height: inherit;
+}
+
+ul,
+ol
+{
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin-bottom: 1.25rem;
+
+    list-style: inherit;
+    list-style-position: outside;
+}
+
+ol
+{
+	list-style: decimal;
+}
+
+ul
+{
+    margin-left: 1.1rem;
+}
+
+ul li ul,
+ul li ol
+{
+    margin-bottom: 0;
+    margin-left: .75rem;
+}
+
+ol
+{
+    margin-left: 1.4rem;
+}
+ol li ul,
+ol li ol
+{
+    margin-bottom: 0;
+    margin-left: .75rem;
+}
+img
+{
+    display: inline-block;
+    vertical-align: baseline;
+    max-width:100%;
+    height:auto;
+}
+.text-center
+{
+    text-align: center;
+}
+.text-left
+{
+    text-align: left;
+}
+.text-right
+{
+    text-align: right;
+}
+.text-justify
+{
+    text-align: justify;
+}
+.uppercase
+{
+    text-transform: uppercase;
+}
+.capitalize
+{
+    text-transform: capitalize;
+}

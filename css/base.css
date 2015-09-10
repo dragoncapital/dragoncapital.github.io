@@ -1,0 +1,51 @@
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font: inherit;font-size: 100%;	margin: 0;padding: 0;vertical-align: baseline;border: 0}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block}
+blockquote,q{quotes: none}
+blockquote:before,blockquote:after,q:before,q:after{content: '';content: none}
+table{border-spacing: 0;border-collapse: collapse}
+
+*,*:before,*:after{-webkit-box-sizing: inherit;-moz-box-sizing: inherit;box-sizing: inherit}
+html,body{font-size: 16px;height: 100%;box-sizing: border-box}
+body{font-family:Arial, sans-serif;font-weight: normal;font-style: normal;line-height: 1.5;position: relative;cursor: auto}
+.clearfix:before,.clearfix:after{display: table;content: ' '}
+.clearfix:after{clear: both}
+
+/* Grid system */
+.row{width: 100%;margin: 0 auto}
+.row .row{width: auto;max-width: none;margin: 0 -.375em}
+.row:before,.row:after{display: table;content: ' '}
+.row:after{clear: both}
+.col{position: relative;float: left;width: 100%;padding-right: .375em;padding-left: .375em}
+.col + .col:last-child{float: right}
+.row.collapse{margin: 0}
+.row.collapse > .col{padding: 0}
+
+[class*='-grid-']{position: relative;display: block;margin: 0 -.375rem;padding: 0}
+[class*='-grid-']:before,[class*='-grid-']:after{display: table;clear: both;content: ' '}
+[class*='-grid-'] > div{position: relative;float: left;width:100%;height: auto;padding: 0 .375rem .75em;}
+
+[class*="-grid-1"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-1"] > div:nth-of-type(1n+1){clear: both}
+[class*="-grid-2"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-2"] > div:nth-of-type(2n+1){clear: both}
+[class*="-grid-3"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-3"] > div:nth-of-type(3n+1){clear: both}
+[class*="-grid-4"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-4"] > div:nth-of-type(4n+1){clear: both}
+[class*="-grid-5"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-5"] > div:nth-of-type(5n+1){clear: both}
+[class*="-grid-6"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-6"] > div:nth-of-type(6n+1){clear: both}
+[class*="-grid-7"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-7"] > div:nth-of-type(7n+1){clear: both}
+[class*="-grid-8"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-8"] > div:nth-of-type(8n+1){clear: both}
+[class*="-grid-9"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-9"] > div:nth-of-type(9n+1){clear: both}
+[class*="-grid-10"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-10"] > div:nth-of-type(10n+1){clear: both}
+[class*="-grid-11"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-11"] > div:nth-of-type(11n+1){clear: both}
+[class*="-grid-12"] > div:nth-of-type(1n){clear: none}
+[class*="-grid-12"] > div:nth-of-type(12n+1){clear: both}

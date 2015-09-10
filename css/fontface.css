@@ -1,0 +1,9 @@
+/* Fontface */
+@font-face {
+	font-family: 'Museo300';
+	src: url('fonts/museo300.otf');
+}
+@font-face {
+	font-family: 'Museo700';
+	src: url('fonts/museo700.otf');
+}
