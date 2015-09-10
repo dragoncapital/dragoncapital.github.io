@@ -145,7 +145,9 @@ jQdcc(document).ready(function($){
 		initEsc();
 
 		$(window).on('resize', function(e){
-
+			h = $(window).height();
+			w = $(window).width();
+			resizeRes();
 		});
 	}
 	function start(){
