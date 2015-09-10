@@ -84,7 +84,7 @@ ul li, ol li, p { font-size:14px; line-height: 1.4;}
 
 #header { display: none;}
 
-.logo { position: fixed; z-index: 25; top:40px; left:50px; width:202px; transition:all ease-in-out .25s;}
+.logo { position: fixed; z-index: 25; top:40px; left:50px; width:202px; -webkit-transition:all ease-in-out .25s; transition:all ease-in-out .25s;}
 
 .mainmenu { transform:translate3d(-300px,0,0); position: fixed; height:100%; height:100vh; z-index: 24; left:0; top:0; bottom:0; transition:all .25s ease-in-out;}
 .mainmenu.active { transform:translate3d(0,0,0);}
@@ -276,7 +276,7 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 
 /*.start-now { position: fixed; top:50%; left:50%; width:300px; height:60px; line-height: 60px; text-align: center; background:#ccc; border-radius:10px; text-transform: uppercase; font-size:16px; margin-left:-150px; margin-top:-30px; letter-spacing: 2px; font-weight: bold; box-shadow:2px 2px 4px #666;}*/
 
-#dcc-home { transition:all cubic-bezier(0.465, 0.183, 0.153, 0.946) 3s;}
+#dcc-home { -webkit-transition:all cubic-bezier(0.465, 0.183, 0.153, 0.946) 3s; transition:all cubic-bezier(0.465, 0.183, 0.153, 0.946) 3s;}
 
 .dcc-building { position: relative;}
 
@@ -304,15 +304,15 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 .dragon { position: absolute; z-index: 12;}
 .dragon.active { z-index: 31;}
 
-.dragon a.dragon-btn { display: block; width:26px; height:26px; background:#fff; background:rgba(255,255,255,.85); color:#000; border-radius:1000px; font-size:26px; text-align: center; line-height: 26px; font-family: sans-serif; box-shadow:0 0 8px #000; position: relative; z-index: 9; transform-origin:50% 50%; transition:all .6s cubic-bezier(0.465, 0.183, 0.153, 0.946); -webkit-animation: planetarium 4s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);  animation: planetarium 4s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)}
+.dragon a.dragon-btn { display: block; width:26px; height:26px; background:#fff; background:rgba(255,255,255,.85); color:#000; border-radius:1000px; font-size:26px; text-align: center; line-height: 26px; font-family: sans-serif; box-shadow:0 0 8px #000; position: relative; z-index: 9; transform-origin:50% 50%; -webkit-transition:all .6s cubic-bezier(0.465, 0.183, 0.153, 0.946);transition:all .6s cubic-bezier(0.465, 0.183, 0.153, 0.946); -webkit-animation: planetarium 4s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);  animation: planetarium 4s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)}
 
-.popup-content { border:2px solid #939598; width:580px; padding:25px; background:#fff; background:rgba(255,255,255,.85); border-radius:4px 24px 24px 24px; transition:all 0.3s cubic-bezier(1,0,0,1); position: absolute; z-index: 8; top:50%; left:50%; transform-origin:0 0; transform:scale(0); opacity:0; box-shadow:0 0 4px #000;}
+.popup-content { border:2px solid #939598; width:580px; padding:25px; background:#fff; background:rgba(255,255,255,.85); border-radius:4px 24px 24px 24px; -webkit-transition:all 0.3s cubic-bezier(1,0,0,1); transition:all 0.3s cubic-bezier(1,0,0,1); position: absolute; z-index: 8; top:50%; left:50%; transform-origin:0 0; transform:scale(0); opacity:0; box-shadow:0 0 4px #000;}
 .popup-content.open-top-right { transform-origin:0% 100%; top:auto; bottom:50%; border-radius:24px 24px 24px 4px;}
 .popup-content.open-top-left { transform-origin:100% 100%; top:auto; bottom:50%; left:auto; right:50%; border-radius:24px 24px 4px 24px;}
 .popup-content.open-bottom-left { transform-origin:100% 0%; left:auto; right:50%; border-radius:24px 4px 24px 24px;}
 
 .dragon.active a.dragon-btn { transform:rotate(225deg); -webkit-animation:none; animation:none;}
-.dragon.active .popup-content { transform:scale(1); opacity: 1; transition:all 0.6s cubic-bezier(1,0,0,1);}
+.dragon.active .popup-content { transform:scale(1); opacity: 1; -webkit-transition:all 0.6s cubic-bezier(1,0,0,1); transition:all 0.6s cubic-bezier(1,0,0,1);}
 
 .dragon-bg { display: block; content:""; position: absolute; top:0; left:0; right:0; bottom:0; background:#000; background:rgba(0,0,0,.5); z-index: -1; cursor:pointer; transform:rotateX(90deg);}
 .dragon.active ~ .dragon-bg { transform:rotateX(0deg); z-index: 30;}
@@ -439,6 +439,6 @@ a.btn-begin { width:120px; height:120px; display:inline-block;}
 .btn-launch { width:102px; height:102px; position: absolute; top:26%; left:50%; margin-left:-56px;}
 .btn-launch span { position:relative; z-index:5; text-indent:-9999px; display: block; width:102px; height:102px; background: url(../img/launch-button.png) no-repeat center; background-size:cover;}
 
-.rocket-holder.active { transform:translateY(-2648px) scale(0); opacity: .9; transition:all 6.5s cubic-bezier(.98,0,.9,.88);}
+.rocket-holder.active { transform:translateY(-2648px) scale(0); opacity: .9; -webkit-transition:all 6.5s cubic-bezier(.98,0,.9,.88); transition:all 6.5s cubic-bezier(.98,0,.9,.88);}
 
 #dcc-rooftop { overflow:visible;}
