@@ -300,9 +300,9 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
    z-index: 98; left:31%;
    width:38%; height:9.5%;
  }
-.start-now { width:500px; height:218px; display:block; background:url(../img/start-a.jpg) no-repeat center; text-indent: -9999px; background-size:cover; -webkit-transform:rotate3d(1,0,0,20deg) skewX(4deg); transform:rotate3d(1,0,0,20deg) skewX(4deg); box-shadow:1px 1px 2px #666; position: relative;}
-.start-now .on { position:absolute; top:0; left:0; right:0; bottom:0; z-index:3; display:block; background:url(../img/start-b.jpg) no-repeat center; -webkit-animation:blinking 10s infinite linear;animation:blinking 10s infinite linear; }
-.start-now .on2x { position:absolute; top:0; left:0; right:0; bottom:0; display:none; background:url(../img/start-c.jpg) no-repeat center; z-index: 5;}
+.start-now { width:100%; height:100%; display:block; background:url(../img/start-a.jpg) no-repeat center; text-indent: -9999px; background-size:cover; -webkit-transform:rotate3d(1,0,0,20deg) skewX(4deg); transform:rotate3d(1,0,0,20deg) skewX(4deg); box-shadow:1px 1px 2px #666; position: relative;}
+.start-now .on { position:absolute; top:0; left:0; right:0; bottom:0; z-index:3; display:block; background:url(../img/start-b.jpg) no-repeat center; background-size:cover; -webkit-animation:blinking 10s infinite linear;animation:blinking 10s infinite linear; }
+.start-now .on2x { position:absolute; top:0; left:0; right:0; bottom:0; display:none; background:url(../img/start-c.jpg) no-repeat center; z-index: 5; background-size:cover; }
 .start-now:hover .on2x { display: block;}
 
 .dragon { position: absolute; z-index: 12;}
