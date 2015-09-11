@@ -343,6 +343,8 @@ jQdcc(document).ready(function($){
 			$('.dragon').removeClass('active');
 			enableNav();
 		})
+
+
 	}
 	function initReveal(){
 		$('.dragon-hiring > a').on('click', function(e){
