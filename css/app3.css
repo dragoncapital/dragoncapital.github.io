@@ -196,7 +196,6 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 
 .dcc-container { position: relative; overflow: hidden;transition:transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s;}
 .dcc-container.launched {transition:transform cubic-bezier(.48,0,.8,.28) 8s;}
-.dcc-container.skip-transition { transition:none;}
 
 .floor-separator { height:50px; background:url(../img/floor-separator.jpg) repeat left center}
 .sky-separator { height:200%; height:200vh; background:url(../img/sky-separator.jpg) repeat center}
@@ -277,12 +276,14 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 .dcc-building { position: relative;}
 
 
-#lobby-content { position: absolute; width:30%; height:57%; top:20%; left:35%; padding:1rem; text-align: center;}
+.centered-content { position: absolute; z-index: 4; top:50%; left:30%; width:40%; text-align:center;}
 
-.lobby-receptionist { position: absolute; z-index: 4; bottom:0; left:35%; width:30%;}
-.lobby-receptionist .lobby-rena { position: absolute; bottom:85px; z-index: -1; width:28%; left:55%}
+#lobby-content { background:url(../img/lobby-monitor.png) no-repeat center; width:747px; height:454px; top:44%; left:50%; margin-left:-374px; padding:10px 14px 22px 33px;}
 
-.whiteboard { }
+.lobby-receptionist { position: absolute; z-index: 4; bottom:0; left:50%; margin-left:-335px;}
+.lobby-receptionist .lobby-rena { position: absolute; bottom:150px; z-index: -1; left:50%; margin-left:-95px; }
+
+.whiteboard { padding:1rem 2rem; background:#083a45; height:423px;}
 
 .dcc-plank { -webkit-transform-style: preserve-3d;
      -webkit-perspective: 800px;
@@ -415,8 +416,8 @@ body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 .dragon-2d-illustrator { top:50%; left:74%;}
 .dragon-3d-illustrator { top:60%; left:69%;}
 
-#dcc-lobby h2 { color:#fff; font-size:38px; margin:0 0 15px;}
-#dcc-lobby p { font-size:14px; color:#fff; margin:0 0 15px;}
+#dcc-lobby h2 { color:#fff; font-size:48px; margin:10px 0 15px;}
+#dcc-lobby p { font-size:16px; color:#fff; margin:0 0 25px;}
 #dcc-lobby a {}
 
 a.btn-begin { width:120px; height:120px; display:inline-block;}
@@ -438,13 +439,11 @@ a.btn-begin { width:120px; height:120px; display:inline-block;}
 .mascot-bear .mascot { animation:mascot 1.8s steps(39) infinite; background:url(../img/mascot-bear.png) no-repeat left center; width:176px; height:240px;}
 .mascot-bebek .mascot { animation:mascot-bebek 1.5s steps(24) infinite; background:url(../img/mascot-bebek.png) no-repeat left center; width:130px; height:200px;}
 
-.rocket-holder { position: absolute; bottom:11%; left:45%; width:10%; height:74%; z-index: 7; }
+.rocket-holder { position: absolute; bottom:11%; left:50%; width:200px; height:640px; margin-left:-100px; z-index: 7; }
 .rocket { position: relative;}
 .btn-launch { width:102px; height:102px; position: absolute; top:26%; left:50%; margin-left:-56px;}
 .btn-launch span { position:relative; z-index:5; text-indent:-9999px; display: block; width:102px; height:102px; background: url(../img/launch-button.png) no-repeat center; background-size:cover;}
 
-.rocket-holder.active { transform:translateY(-2648px) scale(0); opacity: .9; transition:all cubic-bezier(.98,0,.9,.88) 7.5s;}
+.rocket-holder.active { transform:translateY(-2648px) scale(0); opacity: .9; transition:all cubic-bezier(.98,0,.9,.88) 6.5s;}
 
 #dcc-rooftop { overflow:visible;}
-
-.dcc-zeppelin { display: none;}

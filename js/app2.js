@@ -54,7 +54,7 @@ jQdcc(document).ready(function($){
 		checkState();
 	}
 	function gotoPage(page){
-		if(state!=page){			
+		if(1){			
 			state=page;
 			if(page<7){
 				$('body').attr('data-state',state);
@@ -67,6 +67,20 @@ jQdcc(document).ready(function($){
 			$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 			checkState();
 		}
+	}
+	function refreshPage(page){
+		
+		if(page<7){
+			$('body').attr('data-state',state);
+			$('.dcc-nav').addClass('disabled');
+			$('.dcc-container').addClass('skip-transition').css({'transform':'translateY('+calcY(state)+'px)'});
+		}			
+		setTimeout(function(e){
+			$('.dcc-container').removeClass('skip-transition');
+			$('.dcc-nav').removeClass('disabled');
+		},1000);			
+		$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
+		checkState();		
 	}
 	function resizeRes(){
 		var nW = Math.round((2400*h)/1024);
@@ -148,6 +162,7 @@ jQdcc(document).ready(function($){
 			h = $(window).height();
 			w = $(window).width();
 			resizeRes();
+			refreshPage(state);
 		});
 	}
 	function start(){
@@ -332,7 +347,7 @@ jQdcc(document).ready(function($){
 
 	function initCentered(){
 		$('.centered-content').each(function(i,e){
-			$(e).css({'margin-top':($(this).height()/2)*-1+'px'});
+			//$(e).css({'margin-top':($(this).height()/2)*-1+'px'});
 		});
 	}
 	function initEsc(){
