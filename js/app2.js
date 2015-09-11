@@ -119,7 +119,7 @@ jQdcc(document).ready(function($){
 		state = $('body').data('state');
 
 		initImagesLoaded();
-		
+
 		$('.logo a').on('click', function(e){
 			e.preventDefault();
 			e.preventDefault();
@@ -304,7 +304,7 @@ jQdcc(document).ready(function($){
 			valProgress++   ;
 			setProgress(valProgress,imgLen);
 		}).done(function(e){
-			jQuery('.dcc-preloader').slideUp();
+			$('.dcc-preloader').fadeOut(600);
 			checkImagesLoaded();
 		});
 	}
