@@ -304,7 +304,7 @@ jQdcc(document).ready(function($){
 			valProgress++   ;
 			setProgress(valProgress,imgLen);
 		}).done(function(e){
-			$('.dcc-preloader').fadeOut(600);
+			$('.dcc-preloader').delay(2000).fadeOut(600);
 			checkImagesLoaded();
 		});
 	}
@@ -312,7 +312,6 @@ jQdcc(document).ready(function($){
 		var val = (valProgress / imgLen) * 100;
 		$('.progress').css('height',val+'%');
 		$('.progress-val').html(val+'%');
-		console.log(val);
 	} 
 
 	function loadHQ(){
