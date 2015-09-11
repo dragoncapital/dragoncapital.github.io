@@ -448,3 +448,9 @@ a.btn-begin { width:120px; height:120px; display:inline-block;}
 #dcc-rooftop { overflow:visible;}
 
 .dcc-zeppelin { display: none;}
+
+@media only screen and (max-width:640px){
+	#dcc-lobby h2 { color:#fff; font-size:22px; margin:0 0 10px;}
+#dcc-lobby p { font-size:12px; color:#fff; margin:0 0 10px;}
+#dcc-lobby a {}
+}
