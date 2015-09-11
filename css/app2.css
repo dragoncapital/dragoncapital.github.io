@@ -184,7 +184,7 @@ span.lines {-webkit-transform-origin: 50% 50%; transform-origin: 50% 50%; -webki
 .dcc-nav.disabled a, .dcc-nav .nav.disabled a { opacity:.5; background:#666; cursor:not-allowed; pointer-events:none;}
 
 body.disable-nav .logo, body.home .logo { top:-102px; opacity: 0}
-body.disable-nav .mainmenu, body.home .mainmenu { left:-80px; opacity: 0}
+body.disable-nav .mainmenu, body.home .mainmenu { -webkit-transform:translateX(-80px); transform:translateX(-80px); opacity: 0}
 body.disable-nav .dcc-nav, body.home .dcc-nav { right:-300px; opacity: 0}
 
 #content { position: fixed; z-index:20; left:0; top:0; right:0; bottom:0;}

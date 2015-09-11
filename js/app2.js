@@ -211,7 +211,7 @@ jQdcc(document).ready(function($){
 		}).done(function(e){
 			dccDeveloper = new IScroll('#dcc-developer', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { tagName:/^(A)$/}, preventDefault:true});
 			$('.top-nav li.f2 a span.enabled').css('width','100%');
-			initPopup();
+			
 		});
 	}
 	function initCreative(){
@@ -226,7 +226,7 @@ jQdcc(document).ready(function($){
 		}).done(function(e){
 			dccCreative = new IScroll('#dcc-creative', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
 			$('.top-nav li.f3 a span.enabled').css('width','100%');
-			initPopup();
+			
 		});
 	}
 	function initIllustrator(){
@@ -241,7 +241,7 @@ jQdcc(document).ready(function($){
 		}).done(function(e){
 			dccIllustrator = new IScroll('#dcc-illustrator', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
 			$('.top-nav li.f4 a span.enabled').css('width','100%');
-			initPopup();
+			
 		});
 	}
 	function initRooftop(){
@@ -293,6 +293,7 @@ jQdcc(document).ready(function($){
 		setTimeout(function(e){initIllustrator();},300);
 		setTimeout(function(e){initRooftop();},400);
 		setTimeout(function(e){initOutspace();},500);
+		initPopup();
 	}
 	function initImagesLoaded(){
 		$('#dcc-intro, #header').imagesLoaded().done(function(e){
