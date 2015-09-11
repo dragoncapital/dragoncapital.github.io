@@ -23,7 +23,7 @@ jQdcc(document).ready(function($){
 				$('.dcc-container').addClass('launched');
 				$('.rocket-holder').addClass('active');
 			}
-			$('.dcc-container').css({'-webkit-transform':'translateY('+calcY(state)+'px)', 'transform':'translateY('+calcY(state)+'px)'});
+			$('.dcc-container').css({'-webkit-transform':'translate(0px,'+calcY(state)+'px)', 'transform':'translate(0px,'+calcY(state)+'px)'});
 		}
 		if(state==6){
 			setTimeout(function(e){
@@ -194,7 +194,7 @@ jQdcc(document).ready(function($){
 			var curProgress = (valProgress / e.images.length) * 100;
 			$('.top-nav li.f2 a span.enabled').css('width',curProgress+'%');
 		}).done(function(e){
-			dccDeveloper = new IScroll('#dcc-developer', { scrollX: true, scrollY: false, mouseWheel: false, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { className: /(^|\s)popup-content(\s|$)/ }, preventDefault:false});
+			dccDeveloper = new IScroll('#dcc-developer', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { className: /(^|\s)popup-content(\s|$)/ }, preventDefault:false});
 			$('.top-nav li.f2 a span.enabled').css('width','100%');
 			initPopup();
 		});
