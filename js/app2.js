@@ -118,6 +118,8 @@ jQdcc(document).ready(function($){
 		h = $(window).height();
 		state = $('body').data('state');
 
+		initImagesLoaded();
+		
 		$('.logo a').on('click', function(e){
 			e.preventDefault();
 			e.preventDefault();
@@ -171,7 +173,6 @@ jQdcc(document).ready(function($){
 			state=1;
 			var initScroll = ((h*(6-state))+(50*(5-state))+(2*h))*-1;
 			$('.dcc-container').css({'transform':'translateY('+initScroll+'px)'});
-			initImagesLoaded();
 			initLobby();
 			var $scrolled = ($('#dcc-home').height()-$(window).height());
 			$('#header').show();
@@ -296,10 +297,23 @@ jQdcc(document).ready(function($){
 		initPopup();
 	}
 	function initImagesLoaded(){
-		$('#dcc-intro, #header').imagesLoaded().done(function(e){
+		var valProgress = 0;
+		$('#dcc-intro, #header, #dcc-lobby').imagesLoaded().progress(function(e){
+			var imgLen = e.images.length;
+			console.log(imgLen);
+			valProgress++   ;
+			setProgress(valProgress,imgLen);
+		}).done(function(e){
+			jQuery('.dcc-preloader').slideUp();
 			checkImagesLoaded();
 		});
 	}
+	function setProgress(valProgress,imgLen){
+		var val = (valProgress / imgLen) * 100;
+		$('.progress').css('height',val+'%');
+		$('.progress-val').html(val+'%');
+		console.log(val);
+	} 
 
 	function loadHQ(){
 		$('.draggable').find('[data-hq]').each(function(i,e){
