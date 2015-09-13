@@ -782,6 +782,10 @@ body.home .dcc-nav {
 	display: block;
 }
 
+.dcc-zeppelin { 
+	display: none;
+}
+
 /* Lobby Section */
 #lobby-content {
 	position: absolute;
