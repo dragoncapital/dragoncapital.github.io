@@ -237,25 +237,29 @@ body.home .logo {
 
 /* Mainmenu container */
 .mainmenu {
-	left: -300px;
 	position: fixed;
 	height: 100%;
 	height: 100vh;
 	z-index: 24;
 	top: 0;
 	bottom: 0;
+	-webkit-transform:translate3d(-300px,0,0);
+	transform:translate3d(-300px,0,0);
+	-webkit-transition: all .25s ease-in-out;
 	transition: all .25s ease-in-out;
 }
 .mainmenu.active {
-	left: 0;
+	-webkit-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
 }
 .mainmenu.active .menu-items {
+	-webkit-box-shadow: 0 0 8px #000;
 	box-shadow: 0 0 8px #000;
 }
 body.disable-nav .mainmenu,
 body.home .mainmenu {
-	-webkit-transform: translateX(-80px);
-	transform: translateX(-80px);
+	-webkit-transform: translate3d(-380px,0,0);
+	transform: translate3d(-380px,0,0);
 	opacity: 0
 }
 
@@ -283,6 +287,7 @@ body.home .mainmenu {
 	height: 74px;
 	content: "";
 	background: url(../img/menu-bg.png) no-repeat center;
+	background-size:cover;
 	top: -7px;
 	left: 0;
 }
@@ -301,7 +306,7 @@ span.lines {
 span.lines {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
-	-webkit-transition: top 0.25s 0.5s ease-in-out, -webkit-transform 0.25s ease-in-out;
+	-webkit-transition: top 0.25s 0.5s ease-in-out, transform 0.25s ease-in-out;
 	transition: top 0.25s 0.5s ease-in-out, transform 0.25s ease-in-out;
 }
 .lines:before,
@@ -311,7 +316,7 @@ span.lines {
 	height: 6px;
 	background: #fff;
 	border-radius: 2px;
-	-webkit-transition: top 0.25s .5s ease-in-out, -webkit-transform 0.25s .5s ease-in-out;
+	-webkit-transition: top 0.25s .5s ease-in-out, transform 0.25s .5s ease-in-out;
 	transition: top 0.25s .5s ease-in-out, transform 0.25s ease-in-out;
 	position: absolute;
 	left: 0;
@@ -335,7 +340,7 @@ span.lines {
 }
 .mainmenu.active .lines:before,
 .mainmenu.active .lines:after {
-	-webkit-transition: top 0.25s ease-in-out, -webkit-transform 0.25s 0.5s ease-in-out;
+	-webkit-transition: top 0.25s ease-in-out, transform 0.25s 0.5s ease-in-out;
 	transition: top 0.25s ease-in-out, transform 0.25s 0.5s ease-in-out;
 	top: 0;
 }
@@ -347,6 +352,7 @@ span.lines {
 	-webkit-transform: rotate3d(0, 0, 1, -45deg);
 	transform: rotate3d(0, 0, 1, -45deg);
 }
+
 .menu-items {
 	width: 300px;
 	padding: 25px;
@@ -622,12 +628,15 @@ body.home .dcc-nav {
 .dcc-container {
 	position: relative;
 	overflow: hidden;
+	-webkit-transition: transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s;
 	transition: transform cubic-bezier(0.465, 0.183, 0.153, 0.946) 2s;
 }
 .dcc-container.launched {
+	-webkit-transition: transform cubic-bezier(.48, 0, .8, .28) 8s;
 	transition: transform cubic-bezier(.48, 0, .8, .28) 8s;
 }
 .dcc-container.skip-transition {
+	-webkit-transition: none;
 	transition: none;
 }
 .floor-separator {
@@ -738,21 +747,34 @@ body.home .dcc-nav {
 	position: absolute;
 	bottom: 77.5%;
 	z-index: 98;
-	left: 31%;
-	width: 38%;
-	height: 9.9%;
+	left: 50%;
+	margin-left:-250px;
+	width: 500px;
+	height: 218px;
 }
 .start-now {
 	width: 100%;
 	height: 100%;
 	display: block;
-	background: url(../img/start-a.jpg) no-repeat center;
 	text-indent: -9999px;
-	background-size: cover;
 	-webkit-transform: rotate3d(1, 0, 0, 20deg) skewX(4deg);
 	transform: rotate3d(1, 0, 0, 20deg) skewX(4deg);
 	box-shadow: 1px 1px 2px #666;
 	position: relative;
+}
+.start-now img {
+	display: block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.start-now span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	display: block;
 }
 .start-now .on {
 	position: absolute;
@@ -762,7 +784,6 @@ body.home .dcc-nav {
 	bottom: 0;
 	z-index: 3;
 	display: block;
-	background: url(../img/start-b.jpg) no-repeat center;
 	background-size: cover;
 	-webkit-animation: blinking 10s infinite linear;
 	animation: blinking 10s infinite linear;
@@ -774,7 +795,6 @@ body.home .dcc-nav {
 	right: 0;
 	bottom: 0;
 	display: none;
-	background: url(../img/start-c.jpg) no-repeat center;
 	z-index: 5;
 	background-size: cover;
 }
@@ -878,6 +898,7 @@ a.btn-begin {
 	padding: 25px;
 	background: #fff;
 	background: rgba(255, 255, 255, .85);
+	-webkit-border-radius: 4px 24px 24px 24px;
 	border-radius: 4px 24px 24px 24px;
 	-webkit-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
 	transition: all 0.3s cubic-bezier(1, 0, 0, 1);
@@ -885,9 +906,12 @@ a.btn-begin {
 	z-index: 8;
 	top: 50%;
 	left: 50%;
+	-webkit-transform-origin: 0 0;
 	transform-origin: 0 0;
+	-webkit-transform: scale(0);
 	transform: scale(0);
 	opacity: 0;
+	-webkit-box-shadow: 0 0 4px #000;
 	box-shadow: 0 0 4px #000;
 }
 .popup-content img {
@@ -923,31 +947,39 @@ a.btn-begin {
 	line-height: 1.2;
 }
 .popup-content.open-top-right {
+	-webkit-transform-origin: 0% 100%;
 	transform-origin: 0% 100%;
 	top: auto;
 	bottom: 50%;
+	-webkit-border-radius: 24px 24px 24px 4px;
 	border-radius: 24px 24px 24px 4px;
 }
 .popup-content.open-top-left {
+	-webkit-transform-origin: 100% 100%;
 	transform-origin: 100% 100%;
 	top: auto;
 	bottom: 50%;
 	left: auto;
 	right: 50%;
+	-webkit-border-radius: 24px 24px 4px 24px;
 	border-radius: 24px 24px 4px 24px;
 }
 .popup-content.open-bottom-left {
+	-webkit-transform-origin: 100% 0%;
 	transform-origin: 100% 0%;
 	left: auto;
 	right: 50%;
+	-webkit-border-radius: 24px 4px 24px 24px;
 	border-radius: 24px 4px 24px 24px;
 }
 .dragon.active a.dragon-btn {
+	-webkit-transform: rotate(225deg);
 	transform: rotate(225deg);
 	-webkit-animation: none;
 	animation: none;
 }
 .dragon.active .popup-content {
+	-webkit-transform: scale(1);
 	transform: scale(1);
 	opacity: 1;
 	-webkit-transition: all 0.6s cubic-bezier(1, 0, 0, 1);
@@ -965,9 +997,11 @@ a.btn-begin {
 	background: rgba(0, 0, 0, .5);
 	z-index: -1;
 	cursor: pointer;
+	-webkit-transform: rotateX(90deg);
 	transform: rotateX(90deg);
 }
 .dragon.active ~ .dragon-bg {
+	-webkit-transform: rotateX(0deg);
 	transform: rotateX(0deg);
 	z-index: 30;
 }
@@ -986,6 +1020,7 @@ a.btn-begin {
 .dragon-tom { left:70.5%; top:61%;}
 .dragon-yoel { left:80%; top:73%;}
 .dragon-erick { left:81%; top:7%;}
+.dragon-cat { left:10.5%; bottom:24%;}
 
 /* Positioning Team (Illustrator) */
 .dragon-aji { left:10%; top:60%;}
@@ -1002,6 +1037,7 @@ a.btn-begin {
 .dragon-iqbal { left:83.2%; top:46%;}
 .dragon-fano { left:92.5%; top:57%;}
 .dragon-fano { left:94.2%; top:53%;}
+.dragon-bebek { left:49.5%; bottom:31%;}
 
 /* Positioning Team (Creative) */
 .dragon-rajiv { left:9.8%; top:61%;}
@@ -1021,6 +1057,7 @@ a.btn-begin {
 .dragon-vinza { left:88%; top:65%;}
 .dragon-fadli { left:92.2%; top:73%;}
 .dragon-adit { left:92.5%; top:49%;}
+.dragon-bear { left:49%; bottom:29%;}
 
 /* Rooftop Section */
 #dcc-rooftop {
@@ -1040,8 +1077,10 @@ a.btn-begin {
 	position: relative;
 }
 .rocket-holder.active {
-	transform: translateY(-2648px) scale(0);
+	-webkit-transform: translate3d(0,-2648px,0) scale(0);
+	transform: translate3d(0,-2648px,0) scale(0);
 	opacity: .9;
+	-webkit-transition: all cubic-bezier(.98, 0, .9, .88) 7.5s;
 	transition: all cubic-bezier(.98, 0, .9, .88) 7.5s;
 }
 .btn-launch {
@@ -1071,6 +1110,7 @@ a.btn-begin {
 	right: 0;
 	bottom: 0;
 	z-index: 2;
+	height: 100%;
 	height: 100vh;
 }
 .dcc-space .planet {
@@ -1151,6 +1191,7 @@ a.btn-begin {
 	height: 32px;
 	line-height: 30px;
 	color: #fff;
+	-webkit-border-radius: 300px;
 	border-radius: 300px;
 	border: 2px solid #fff;
 }
@@ -1179,18 +1220,21 @@ a.btn-begin {
 	bottom: 17%;
 }
 .mascot-cat .mascot {
+	-webkit-animation: mascot 1.5s steps(24) infinite;
 	animation: mascot 1.5s steps(24) infinite;
 	background: url(../img/mascot-cat.png) no-repeat left center;
 	width: 200px;
 	height: 220px;
 }
 .mascot-bear .mascot {
+	-webkit-animation: mascot 1.8s steps(39) infinite;
 	animation: mascot 1.8s steps(39) infinite;
 	background: url(../img/mascot-bear.png) no-repeat left center;
 	width: 176px;
 	height: 240px;
 }
 .mascot-bebek .mascot {
+	-webkit-animation: mascot-bebek 1.5s steps(24) infinite;
 	animation: mascot-bebek 1.5s steps(24) infinite;
 	background: url(../img/mascot-bebek.png) no-repeat left center;
 	width: 130px;
@@ -1214,6 +1258,7 @@ a.btn-begin {
 	position: absolute;
 	z-index: 1;
 	background: #fff;
+	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
 	-webkit-animation: ripple 1s infinite ease-in-out;
 	animation: ripple 2s infinite ease;
@@ -1230,6 +1275,7 @@ a.btn-begin {
 	position: absolute;
 	z-index: 2;
 	background: #fff;
+	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
 	-webkit-animation: inner-ripple 1s infinite ease-in-out;
 	animation: inner-ripple 2s .5s infinite ease;
@@ -1260,7 +1306,9 @@ a.btn-begin {
 	border: 2px solid #939598;
 	background: #fff;
 	background: rgba(255, 255, 255, .85);
+	-webkit-border-radius: 24px 4px 24px 24px;
 	border-radius: 24px 4px 24px 24px;
+	-webkit-box-shadow: 0 0 4px #000;
 	box-shadow: 0 0 4px #000;
 }
 .reveal-modal a {
@@ -1296,21 +1344,27 @@ a.btn-begin {
 	text-align: center;
 	border: 2px solid #939598;
 	background: #fff;
+	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
 	top: -15px;
 	right: -15px;
 	z-index: 46;
 	color: #000;
-	transform: rotate(45deg);
+	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-box-shadow: 0 0 8px #000;
 	box-shadow: 0 0 8px #000;
 }
 
 /* Large Screen (standard 13" notebook) Media Queries */
 @media only screen and (max-width: 1366px) {
 	.mascot-holder {
-		transform: scale(.8);
+		-webkit-transform-origin: 0% 100%;
 		transform-origin: 0% 100%;
+		-webkit-transform: scale(.8);
+		transform: scale(.8);		
 	}
 }
 
@@ -1340,8 +1394,8 @@ a.btn-begin {
 		transform: scale(.8);
 	}
 	.mascot-holder {
+		-webkit-transform: scale(.6);
 		transform: scale(.6);
-		transform-origin: 0% 100%;
 	}
 	.popup-content {
 		border: none width: 100%;
@@ -1349,6 +1403,7 @@ a.btn-begin {
 		padding: 25px;
 		background: #fff;
 		background: rgba(255, 255, 255, .85);
+		-webkit-border-radius: 0;
 		border-radius: 0;
 		-webkit-transition: all 0.3s cubic-bezier(1, 0, 0, 1);
 		transition: all 0.3s cubic-bezier(1, 0, 0, 1);
@@ -1358,41 +1413,52 @@ a.btn-begin {
 		right: 0;
 		bottom: 0;
 		left: 0;
+		-webkit-transform-origin: 0 0;
 		transform-origin: 0 0;
+		-webkit-transform: scale(0) rotateX(90deg);
 		transform: scale(0) rotateX(90deg);
 		opacity: 0;
+		-webkit-box-shadow: none;
 		box-shadow: none;
 	}
 	.popup-content.open-top-right {
+		-webkit-transform-origin: 50% 50%;
 		transform-origin: 50% 50%;
 		top: 0;
 		bottom: 0;
+		-webkit-border-radius: 0;
 		border-radius: 0;
 		left: 0;
 		right: 0;
 	}
 	.popup-content.open-top-left {
+		-webkit-transform-origin: 50% 50%;
 		transform-origin: 50% 50%;
 		top: 0;
 		bottom: 0;
+		-webkit-border-radius: 0;
 		border-radius: 0;
 		left: 0;
 		right: 0;
 	}
 	.popup-content.open-bottom-left {
+		-webkit-transform-origin: 50% 50%;
 		transform-origin: 50% 50%;
 		top: 0;
 		bottom: 0;
+		-webkit-border-radius: 0;
 		border-radius: 0;
 		left: 0;
 		right: 0;
 	}
 	.dragon.active a.dragon-btn {
+		-webkit-transform: rotate(225deg);
 		transform: rotate(225deg);
 		-webkit-animation: none;
 		animation: none;
 	}
 	.dragon.active .popup-content {
+		-webkit-transform: scale(1) rotateX(0deg);
 		transform: scale(1) rotateX(0deg);
 		opacity: 1;
 		-webkit-transition: all 0.6s cubic-bezier(1, 0, 0, 1);
@@ -1411,9 +1477,11 @@ a.btn-begin {
 		background: rgba(0, 0, 0, .5);
 		z-index: -1;
 		cursor: pointer;
+		-webkit-transform: rotateX(90deg);
 		transform: rotateX(90deg);
 	}
 	.dragon.active ~ .dragon-bg {
+		-webkit-transform: rotateX(0deg);
 		transform: rotateX(0deg);
 		z-index: 30;
 	}
