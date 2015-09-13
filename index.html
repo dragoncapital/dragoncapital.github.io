@@ -7,12 +7,12 @@
 	<title>Dragon Capital Center</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<script src="js/modernizr.js" type="text/javascript"></script>
-	<link href="css/fontface.css" rel="stylesheet" type="text/css">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<link href="css/foundation.css" rel="stylesheet">
+	<script type="text/javascript" src="js/modernizr.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontface.css">
+	<link rel="stylesheet" type="text/css" href="css/cframe.min.css">
 	<style>
-	.dcc-preloader {
+		.dcc-preloader {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -22,7 +22,10 @@
 			z-index: 99;
 			height: 100%;
 		}
-		.dcc-preloader > div { transition:all ease .5s; transform-origin:50% 50%;}
+		.dcc-preloader > div {
+			transition: all ease .5s;
+			transform-origin: 50% 50%;
+		}
 		.progress-bar {
 			position: absolute;
 			left: 50%;
@@ -67,9 +70,15 @@
 			z-index: 1;
 		}
 	</style>
-	<link href="css/app2.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body class="home" data-state="0">
+	
+	<div class="dcc-preloader">
+		<div class="progress-bar"><div class="progress"></div><div class="progress-val text-center"></div></div>
+		<div class="main-preload"><img src="img/preload.gif"></div>
+		<div class="logo-preload"><img src="img/logo-preload.png"></div>
+	</div>
 
 	<header id="header">		
 		<div class="logo"><a href="http://www.dragoncapital.center/" title="Dragon Capital Center"><img src="img/logo.png" alt="Dragon Capital Center"></a></div>
@@ -381,23 +390,6 @@
 															<a href="#" class="close-reveal"><span class="fa fa-plus"></span></a>
 														</div>
 													</div>
-
-													<!-- <div class="dragon-hiring dragon-conceptor">
-														<a href="#dragon-conceptor" data-dragon-id="dragon-conceptor">Conceptor</a>
-														<div id="dragon-conceptor" class="reveal">
-															<div class="hiring-content">
-																<h3>Conceptor</h3>
-																<p>You will be working in line with our Art Director, Graphic Director, Creative Director, Chief Production Officer, Chief Marketing Officer and Brand Manager to create and develop the company concept on all platforms.</p>
-																<p>We believe result is a journey, not a destination and it is one of your job to keep the company vision and mission intact all the time. You are the Alpha and Omega of this company. </p>
-																<h6>Requirement</h6>
-																<p>Live in the Future | Full of Ideas | Multi Talent | Great Thinker | Never Give Up on Things</p>
-															</div>
-															<div class="hiring-footer">
-																<p>Send your CV and resume to: <strong><a href="mailto:join@dragoncapital.center">join@dragoncapital.center</a></strong></p>
-															</div>
-															<a href="#" class="close-reveal"><span class="fa fa-plus"></span></a>
-														</div>
-													</div> -->
 
 												</div>
 											</div>
@@ -1191,17 +1183,10 @@
 		<div class="nav down"><a href="#prev"><span class="fa fa-chevron-down"></span></a></div>
 	</footer>
 
-	<div class="dcc-preloader">
-		<div class="progress-bar"><div class="progress"></div><div class="progress-val text-center"></div></div>
-		<div class="main-preload"><img src="img/preload.gif"></div>
-		<div class="logo-preload"><img src="img/logo-preload.png"></div>
-	</div>
-
-	<script src="js/jquery.js" type="text/javascript"></script>
-
-	<script src="js/jquery.parallax.min.js" type="text/javascript"></script>
-	<script src="js/iscroll.js"></script>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/app2.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.parallax.min.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
