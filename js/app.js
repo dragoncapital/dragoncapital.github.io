@@ -54,7 +54,7 @@ jQdcc(document).ready(function($){
 		checkState();
 	}
 	function gotoPage(page){
-		if(1){			
+		if(state!=page){			
 			state=page;
 			if(page<7){
 				$('body').attr('data-state',state);
