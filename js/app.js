@@ -213,8 +213,7 @@ jQdcc(document).ready(function($){
 			$('.top-nav li.f2 a span.enabled').css('width',curProgress+'%');
 		}).done(function(e){
 			dccDeveloper = new IScroll('#dcc-developer', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { tagName:/^(A)$/}, preventDefault:true});
-			$('.top-nav li.f2 a span.enabled').css('width','100%');
-			
+			$('.top-nav li.f2 a span.enabled').css('width','100%');			
 		});
 	}
 	function initCreative(){
@@ -297,6 +296,9 @@ jQdcc(document).ready(function($){
 		setTimeout(function(e){initRooftop();},400);
 		setTimeout(function(e){initOutspace();},500);
 		initPopup();
+		$('.dragon > a').each(function(i,e){
+			$(e).css({'animation':'planetarium 4000ms '+Math.floor((Math.random() * 500) + 200)+'ms'+' infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)'});
+		});
 	}
 	function initImagesLoaded(){
 		var valProgress = 0;
