@@ -720,6 +720,46 @@ body.home .dcc-nav {
 	width: 4000px;
 }
 
+/* Aux */
+.rippling {
+	position: relative;
+	z-index: 4;
+}
+.rippling:before {
+	display: block;
+	content: "";
+	width: 100px;
+	height: 100px;
+	top: 50%;
+	margin-top: -50px;
+	left: 50%;
+	margin-left: -50px;
+	position: absolute;
+	z-index: 1;
+	background: #fff;
+	-webkit-border-radius: 1000px;
+	border-radius: 1000px;
+	-webkit-animation: ripple 1s infinite ease-in-out;
+	animation: ripple 2s infinite ease;
+}
+.rippling:after {
+	display: block;
+	content: "";
+	width: 100px;
+	height: 100px;
+	top: 50%;
+	margin-top: -50px;
+	left: 50%;
+	margin-left: -50px;
+	position: absolute;
+	z-index: 2;
+	background: #fff;
+	-webkit-border-radius: 1000px;
+	border-radius: 1000px;
+	-webkit-animation: inner-ripple 1s infinite ease-in-out;
+	animation: inner-ripple 2s .5s infinite ease;
+}
+
 /* Homepage */
 #dcc-home {
 	-webkit-transition: all cubic-bezier(0.465, 0.183, 0.153, 0.946) 3s;
@@ -846,13 +886,12 @@ a.btn-begin {
 	display: inline-block;
 }
 .btn-begin span {
-	line-height: 34px;
+	line-height: 1;
 	font-size: 22px;
 	word-spacing: 100px;
-	padding: 32px 0;
+	padding: 0;
 	text-align: center;
 	border-radius: 1000px;
-	background: url(../img/lobby-button.png) no-repeat center;
 	text-transform: uppercase;
 	color: #fff;
 	letter-spacing: 2px;
@@ -861,6 +900,9 @@ a.btn-begin {
 	height: 120px;
 	display: block;
 	z-index: 5;
+}
+.btn-begin img { 
+	display: block;
 }
 
 /* Team Buttons & Sliding Popup */
@@ -1101,6 +1143,9 @@ a.btn-begin {
 	background: url(../img/launch-button.png) no-repeat center;
 	background-size: cover;
 }
+.btn-launch img {
+	display: block;
+}
 
 /* Outspace Section */
 .dcc-space {
@@ -1241,46 +1286,6 @@ a.btn-begin {
 	height: 200px;
 }
 
-/* Aux */
-.rippling {
-	position: relative;
-	z-index: 4;
-}
-.rippling:before {
-	display: block;
-	content: "";
-	width: 100px;
-	height: 100px;
-	top: 50%;
-	margin-top: -50px;
-	left: 50%;
-	margin-left: -50px;
-	position: absolute;
-	z-index: 1;
-	background: #fff;
-	-webkit-border-radius: 1000px;
-	border-radius: 1000px;
-	-webkit-animation: ripple 1s infinite ease-in-out;
-	animation: ripple 2s infinite ease;
-}
-.rippling:after {
-	display: block;
-	content: "";
-	width: 100px;
-	height: 100px;
-	top: 50%;
-	margin-top: -50px;
-	left: 50%;
-	margin-left: -50px;
-	position: absolute;
-	z-index: 2;
-	background: #fff;
-	-webkit-border-radius: 1000px;
-	border-radius: 1000px;
-	-webkit-animation: inner-ripple 1s infinite ease-in-out;
-	animation: inner-ripple 2s .5s infinite ease;
-}
-
 /* Popup Aux */
 .reveal {
 	display: none;
@@ -1357,7 +1362,13 @@ a.btn-begin {
 	-webkit-box-shadow: 0 0 8px #000;
 	box-shadow: 0 0 8px #000;
 }
-
+@media only screen and (max-width:1440px) {
+	.dcc-plank {
+		width:400px;
+		margin-left:-200px;
+		height:174.4px;
+	}
+}
 /* Large Screen (standard 13" notebook) Media Queries */
 @media only screen and (max-width: 1366px) {
 	.mascot-holder {
@@ -1371,11 +1382,16 @@ a.btn-begin {
 /* Tablet iPad Landscape and Normal Screen Media Queries */
 @media only screen and (max-width: 1024px) {}
 
-/* Tablet iPad Portrait and Medium Screen Media Queries */
+/* Tablet iPad and Portrait and Medium Screen Media Queries */
 @media only screen and (max-width: 768px) and (orientation: portrait) {}
 
 /* Mobile Down and Small Screen Media Queries */
 @media only screen and (max-width: 640px) {
+	.dcc-plank {
+		width:240px;
+		margin-left:-120px;
+		height:104.64px;
+	}
 	#dcc-lobby h2 {
 		color:#fff;
 		font-size:22px;

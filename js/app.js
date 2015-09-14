@@ -118,6 +118,8 @@ jQdcc(document).ready(function($){
 		h = $(window).height();
 		state = $('body').data('state');
 
+		setTimeout(function(e){$('body').addClass('ready');},3000);
+
 		initImagesLoaded();
 
 		$('.logo a').on('click', function(e){
