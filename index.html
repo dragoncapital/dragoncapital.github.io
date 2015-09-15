@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontface.css">
 	<link rel="stylesheet" type="text/css" href="css/cframe.min.css">
-	<style>.dcc-preloader {position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #dcdddf;z-index: 99;height: 100%;}.dcc-preloader > div {transition: all ease .5s;transform-origin: 50% 50%;}.progress-bar {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;transform: translate(-50%, -50%);width: 54px;height: 64px;background: #b4b4b4;z-index: 2;}.progress {width: 54px;height: 0%;background: #6bbcff;}.progress-val {color: #6bbcff;font-size: 16px;font-weight: bold;}.logo-preload {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;transform: translate(-50%, -50%);width: 54px;height: 65px;z-index: 3;}.main-preload {position: absolute;left: 50%;top: 50%;margin: 0;margin-right: -50%;transform: translate(-50%, -50%);width: 250px;z-index: 1;}</style>
+	<style>.dcc-preloader {position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #dcdddf;z-index: 99;height: 100%;}.dcc-preloader > div {-webkit-transition: all ease .5s;transition: all ease .5s;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}.progress-bar {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 64px;background: #b4b4b4;z-index: 2;}.progress {width: 54px;height: 0%;background: #6bbcff;}.progress-val {color: #6bbcff;font-size: 16px;font-weight: bold;}.logo-preload {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 65px;z-index: 3;}.main-preload {position: absolute;left: 50%;top: 50%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 250px;z-index: 1;}</style>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body class="home" data-state="0">
@@ -404,13 +404,16 @@
 								</div>
 							</div>
 						</div>
+						<div class="drag-nav drag-nav-outspace">
+							<div class="drag-prev draggie"><span class="fa fa-angle-left"></span></div>
+							<div class="drag-next draggie"><span class="fa fa-angle-right"></span></div>
+						</div>
 					</div>
 				</div>
 				
 				<div class="sky-separator"></div>
 
 				<div class="dcc-page">
-
 					<div class="dcc-draggable" id="dcc-rooftop">
 						<div class="draggable draggable-normal">
 							<div class="drag-background"><img data-src="img/rooftop.jpg" data-hq="img/rooftop-hq.jpg" alt="Rooftop" class="bg-lq"></div>
@@ -423,6 +426,10 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="drag-nav drag-nav-rooftop">
+							<div class="drag-prev draggie"><span class="fa fa-angle-left"></span></div>
+							<div class="drag-next draggie"><span class="fa fa-angle-right"></span></div>
 						</div>
 					</div>
 				</div>
@@ -442,7 +449,7 @@
 									<div class="dragon dragon-bebek">
 										<a href="#dragon-bebek" class="dragon-btn">+</a>
 										<div class="popup-content open-top-left">
-											<img src="img/dragoners/van.png" alt="">
+											<img src="img/dragoners/bebek.png" alt="">
 											<div class="details">
 												<h4>Mascot</h4>
 												<h5>Mascot</h5>
@@ -641,6 +648,10 @@
 
 							</div>
 						</div>
+						<div class="drag-nav drag-nav-illustrator">
+							<div class="drag-prev draggie"><span class="fa fa-angle-left"></span></div>
+							<div class="drag-next draggie"><span class="fa fa-angle-right"></span></div>
+						</div>
 					</div>
 				</div>
 
@@ -659,7 +670,7 @@
 									<div class="dragon dragon-bear">
 										<a href="#dragon-bear" class="dragon-btn">+</a>
 										<div class="popup-content open-top-left">
-											<img src="img/dragoners/van.png" alt="">
+											<img src="img/dragoners/bear.png" alt="">
 											<div class="details">
 												<h4>Mascot</h4>
 												<h5>Mascot</h5>
@@ -914,6 +925,10 @@
 
 							</div>
 						</div>
+						<div class="drag-nav drag-nav-creative">
+							<div class="drag-prev draggie"><span class="fa fa-angle-left"></span></div>
+							<div class="drag-next draggie"><span class="fa fa-angle-right"></span></div>
+						</div>
 					</div>
 				</div>
 
@@ -932,7 +947,7 @@
 									<div class="dragon dragon-van">
 										<a href="#dragon-van" class="dragon-btn">+</a>
 										<div class="popup-content">
-											<img src="img/dragoners/van.png" alt="">
+											<img src="img/dragoners/cat.png" alt="">
 											<div class="details">
 												<h4>Ervandra Halim</h4>
 												<h5>S.W.A.G Team Leader</h5>
@@ -1131,6 +1146,10 @@
 
 							</div>
 						</div>
+						<div class="drag-nav drag-nav-developer">
+							<div class="drag-prev draggie"><span class="fa fa-angle-left"></span></div>
+							<div class="drag-next draggie"><span class="fa fa-angle-right"></span></div>
+						</div>
 					</div>
 				</div>
 
@@ -1140,25 +1159,28 @@
 					<div class="dcc-draggable" id="dcc-lobby">
 						<div class="draggable draggable-normal">
 							<div class="drag-background"><img src="img/lobby.jpg" data-hq="img/lobby-hq.jpg" alt="Lobby" class="bg-lq"></div>
+							
 							<div class="drag-content">
 
 								<div class="lobby-assets">
 									<div class="centered-content" id="lobby-content">
-										<div class="lobby-content">
-											<div class="whiteboard">
-												<h2>Start the future now!</h2>
-												<p>Hi, FYI we just came back to mother earth to spread the news about what we have seen back in the future. So most probably what we are doing might not be something you have seen before. We know what you have thought. No, not that one, and not that one either. Curious?</p>
-												<a class="btn-begin rippling"><span><img src="img/lobby-button.png" alt=""></span></a>
+										<div class="content">
+											<h2>Start the future now!</h2>
+											<p><span class="paragraph"></span></p>
+											<div class="lobby-button-container">
+											<a class="btn-begin btn-meet-us rippling"><span><img src="img/meet-us-button.png" alt=""></span></a>
+												<a class="btn-begin btn-watch-us rippling"><span><img src="img/watch-us-button.png" alt=""></span></a>
 											</div>
 										</div>
-									</div>
-									<div class="lobby-receptionist">
-										<div class="lobby-table"><img src="img/lobby-table.png" alt="Table"></div>
-										<div class="lobby-rena"><img src="img/lobby-rena.png" alt="Rena"></div>
+
 									</div>
 								</div>
 
 							</div>
+						</div>
+						<div class="drag-nav drag-nav-lobby">
+							<div class="drag-prev draggie"><span class="fa fa-angle-left"></span></div>
+							<div class="drag-next draggie"><span class="fa fa-angle-right"></span></div>
 						</div>
 					</div>
 				</div>
@@ -1176,6 +1198,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.parallax.min.js"></script>
 	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script type="text/javascript" src="js/typed.min.js"></script>
 	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
