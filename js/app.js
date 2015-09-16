@@ -434,7 +434,7 @@ function initRooftop(){
 		var rooftopStartX = (($('.draggable-normal').width() - w)/2)*-1;
 		dccRooftop = new IScroll('#dcc-rooftop', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }, startX:rooftopStartX});
 		$('.top-nav li.f5 a span.enabled').css('width','100%');
-		$('#preload-developer').fadeOut(250);
+		$('#preload-rooftop').fadeOut(250);
 	});
 	$('.btn-launch').on('click', function(e){
 		e.preventDefault();

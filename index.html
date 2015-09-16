@@ -11,7 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontface.css">
 	<link rel="stylesheet" type="text/css" href="css/cframe.min.css">
-	<style>.dcc-preloader {position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #dcdddf;z-index: 99;height: 100%;}.dcc-preloader > div {-webkit-transition: all ease .5s;transition: all ease .5s;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}.progress-bar {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 64px;background: #b4b4b4;z-index: 2;}.progress {width: 54px;height: 0%;background: #6bbcff;}.progress-val {color: #6bbcff;font-size: 16px;font-weight: bold;}.logo-preload {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 65px;z-index: 3;}.main-preload {position: absolute;left: 50%;top: 50%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 250px;z-index: 1;}</style>
+	<style>.dcc-preloader {position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #dcdddf;z-index: 99;height: 100%;}.dcc-preloader > div {-webkit-transition: all ease .5s;transition: all ease .5s;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}.progress-bar {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 64px;background: #b4b4b4;z-index: 2;}.progress {width: 54px;height: 0%;background: #6bbcff;}.progress-val {color: #6bbcff;font-size: 16px;font-weight: bold;}.logo-preload {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 65px;z-index: 3;}.main-preload {position: absolute;left: 50%;top: 50%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 250px;z-index: 1;} .sub-preloader { top:0;right:0;bottom:0;left:0; z-index: 23; background: #ebebeb url(img/sub-preloader.gif) no-repeat center; position: absolute;} .sub-preloader span {	top: 50%;	left: 50%;position: absolute;-webkit-transform: translate(-50%,-50%);	transform: translate(-50%,-50%);color: #6bbcff;}
+	</style>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body class="home" data-state="0">
@@ -81,6 +82,7 @@
 			<div class="dcc-container">
 
 				<div class="dcc-page">
+					<div class="sub-preloader" id="preload-outspace"><span>50%</span></div>
 					<div class="dcc-draggable" id="dcc-outspace">
 						<div class="draggable draggable-normal">
 							<div class="drag-background"><img data-src="img/outspace.jpg" data-hq="img/outspace-hq.jpg" alt="Outspace" class="bg-lq"></div>
@@ -414,6 +416,7 @@
 				<div class="sky-separator"></div>
 
 				<div class="dcc-page">
+					<div class="sub-preloader" id="preload-rooftop"><span>50%</span></div>
 					<div class="dcc-draggable" id="dcc-rooftop">
 						<div class="draggable draggable-normal">
 							<div class="drag-background"><img data-src="img/rooftop.jpg" data-hq="img/rooftop-hq.jpg" alt="Rooftop" class="bg-lq"></div>
@@ -437,6 +440,7 @@
 				<div class="floor-separator"></div>
 
 				<div class="dcc-page">
+					<div class="sub-preloader" id="preload-illustrator"><span>50%</span></div>
 					<div class="dcc-draggable" id="dcc-illustrator">
 						<div class="draggable draggable-wide">
 							<div class="drag-background"><img data-src="img/illustrator.jpg" data-hq="img/illustrator-hq.jpg" alt="Illustrator" class="bg-lq"></div>
@@ -658,6 +662,7 @@
 				<div class="floor-separator"></div>
 
 				<div class="dcc-page">
+					<div class="sub-preloader" id="preload-creative"><span>50%</span></div>
 					<div class="dcc-draggable" id="dcc-creative">
 						<div class="draggable draggable-wide">
 							<div class="drag-background"><img data-src="img/creative.jpg" data-hq="img/creative-hq.jpg" alt="Creative" class="bg-lq"></div>
@@ -935,6 +940,7 @@
 				<div class="floor-separator"></div>
 
 				<div class="dcc-page">
+					<div class="sub-preloader" id="preload-developer"><span>50%</span></div>
 					<div class="dcc-draggable" id="dcc-developer">
 						<div class="draggable draggable-wide">
 							<div class="drag-background"><img data-src="img/developer.jpg" data-hq="img/developer-hq-opt.jpg" alt="Developer" class="bg-lq"></div>
@@ -1168,7 +1174,7 @@
 											<h2>Start the future now!</h2>
 											<p><span class="paragraph"></span></p>
 											<div class="lobby-button-container">
-											<a class="btn-begin btn-meet-us rippling"><span><img src="img/meet-us-button.png" alt=""></span></a>
+												<a class="btn-begin btn-meet-us rippling"><span><img src="img/meet-us-button.png" alt=""></span></a>
 												<a class="btn-begin btn-watch-us rippling"><span><img src="img/watch-us-button.png" alt=""></span></a>
 											</div>
 										</div>
