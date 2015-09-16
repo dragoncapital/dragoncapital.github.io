@@ -1240,25 +1240,27 @@ a.btn-begin {
 	animation: planetarium 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
 .dcc-space .planet.planet-dev {
-	width: 744px;
-	height: 744px;
-	margin-top: -244px;
+	width: 33%;
+	height: auto;
+	min-height:50%;
+	margin-top: -12%;
 	left: 13%;
 }
 .dcc-space .planet.planet-creative {
-	width: 550px;
-	height: 661px;
-	margin-top: -461px;
-	left: 50%;
-	margin-left: -155px;
+	width: 25%;
+	height: auto;
+	min-height: 50%;
+	margin-top: -20%;
+	left: 43%;
 	-webkit-animation: planetarium 3s infinite 3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	animation: planetarium 3s infinite 3s cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
 .dcc-space .planet.planet-illustrator {
-	width: 432px;
-	height: 528px;
-	margin-top: -128px;
-	right: 10%;
+	width: 20%;
+	height: auto;
+	min-height: 50%;
+	margin-top: -6%;
+	right: 12%;
 	-webkit-animation: planetarium 4s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
 	animation: planetarium 4s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)
 }
@@ -1312,6 +1314,7 @@ a.btn-begin {
 	-webkit-border-radius: 300px;
 	border-radius: 300px;
 	border: 2px solid #fff;
+	white-space: nowrap;
 }
 .planet-creative .dragon-hiring > a {
 	background: #f57326;
