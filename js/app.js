@@ -575,7 +575,7 @@ function checkImagesLoaded(){
 }
 function initImagesLoaded(){
 	var valProgress = 0;
-	$('#dcc-intro, #header, #dcc-lobby').imagesLoaded().progress(function(e){
+	$('#dcc-intro, #header').imagesLoaded().progress(function(e){
 		var imgLen = e.images.length;
 		console.log(imgLen);
 		valProgress++;
