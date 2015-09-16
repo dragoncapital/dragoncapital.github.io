@@ -578,7 +578,7 @@ function initImagesLoaded(){
 	$('#dcc-intro, #header, #dcc-lobby').imagesLoaded().progress(function(e){
 		var imgLen = e.images.length;
 		console.log(imgLen);
-		valProgress++   ;
+		valProgress++;
 		setProgress(valProgress,imgLen);
 	}).done(function(e){
 		$('.dcc-preloader').delay(1500).fadeOut(300);
