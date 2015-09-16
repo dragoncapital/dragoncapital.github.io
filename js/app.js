@@ -132,12 +132,14 @@ jQdcc(document).ready(function($){
 			}
 		})
 
-		$('.menu-button, .close-menu-mask').on('click', function(e){
+		$('.menu-button').on('click', function(e){
 			e.preventDefault();
 			if(!$('#header').hasClass('disabled')){
 				if(!$('.mainmenu').hasClass('active')){
+					$('body').addClass('menu-opened');
 					$('.mainmenu').addClass('active');
 				}else{
+					$('body').removeClass('menu-opened');
 					$('.mainmenu').removeClass('active');
 				}
 			}
@@ -188,7 +190,15 @@ jQdcc(document).ready(function($){
 						$('body').attr('data-state', state);
 						$('.dcc-nav, body, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 						$('#dcc-intro').remove();
-						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 3, callback: function(e){$('.lobby-button-container').addClass('active');}});
+						$('.skip-typed-button').on('click', function(e){
+							e.preventDefault();
+							$(this).fadeOut(250);
+							$('.normal-typed').hide();
+							$('.skip-typed').show();
+
+							$('.lobby-button-container').addClass('active');
+						});
+						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 1, callback: function(e){$('.lobby-button-container').addClass('active');}});
 					},3000);
 				},4000);
 			},600);
