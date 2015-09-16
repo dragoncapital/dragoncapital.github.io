@@ -210,16 +210,21 @@ p {
 .logo {
 	position: fixed;
 	z-index: 25;
-	top: 40px;
-	left: 50px;
-	width: 202px;
+	top: 30px;
+	left: 30px;
+	width: 66px;
 	-webkit-transition: all ease-in-out .25s;
 	transition: all ease-in-out .25s;
+	text-align: center;
 }
 body.disable-nav .logo,
 body.home .logo {
 	top: -102px;
 	opacity: 0
+}
+
+body.menu-opened .logo {
+	left:117px;
 }
 
 /* Mainmenu container */
@@ -888,13 +893,13 @@ body.home .dcc-nav {
     -webkit-animation: planetarium 2s infinite;
     animation: planetarium 2s infinite;
 }
-.dcc-zeppelin .front-zeppelin { 
+.front-zeppelin { 
     position: absolute; 
     width: 300px;
     -webkit-animation: front-zeppelin 40s linear infinite;
     animation: front-zeppelin 40s linear infinite;
 }
-.dcc-zeppelin .back-zeppelin { 
+.back-zeppelin { 
     position: absolute; 
     width: 300px;
     -webkit-animation: back-zeppelin 40s linear infinite;
@@ -903,10 +908,10 @@ body.home .dcc-nav {
     animation-delay: 20s;
     opacity: 0;
 }
-.dcc-zeppelin .front-zeppelin .zep-img {height: 121px; padding-right: 10px;}
-.dcc-zeppelin .front-zeppelin .zep-img img {height: 121px;}
-.dcc-zeppelin .front-zeppelin .zep-led {width: 100%; text-align: center;}
-.dcc-zeppelin .front-zeppelin .zep-led img {width: 50%;}
+.zep-img {height: 121px; padding-right: 10px;}
+.zep-img img {height: 121px;}
+.zep-led {width: 100%; text-align: center;}
+.zep-led img {width: 50%;}
 
 /* Lobby Section */
 #lobby-content {
@@ -917,6 +922,7 @@ body.home .dcc-nav {
 	padding: 1rem 2rem;
 	text-align: center;
 	text-shadow:-2px 1px 2px rgba(0,0,0,.3);
+	min-height: 420px;
 /*
 	background:url(../img/lobby-monitor.png) no-repeat center;
 	background-size:cover;
@@ -936,9 +942,18 @@ body.home .dcc-nav {
 .skip-typed {
 	display: none;
 }
+.skip-container {
+	position: absolute;
+	z-index: 15;
+	left:0; right:0;
+	bottom:0;
+}
 a.skip-typed-button {
 	display: inline-block; color:#fff; font-size:16px;
+	padding:5px 10px; background:#fff; background:rgba(255,255,255,.15);
 	animation:blinking 10s infinite;
+	box-shadow:0 0 2px rgba(0,0,0,.15);
+	border-radius:4px;
 }
 
 #dcc-lobby h2 {
@@ -1502,10 +1517,20 @@ a.btn-begin {
 /* Tablet iPad Landscape and Normal Screen Media Queries */
 @media only screen and (max-width: 1024px) {
 	.logo {
-		top: 10px;
+		top: 15px;
 		left: 15px;
 	}
 	.menu-items { overflow-y:auto; min-height: 100%; position: static; padding-top:0; margin-top:80px;}
+	.top-nav { position: relative; top:auto; left:0; margin-top:0;}
+	.dcc-socials { position: relative; padding:25px 0;}
+}
+
+@media only screen and (max-height: 680px){
+	.logo {
+		top: 15px;
+		left: 15px;
+	}
+	.menu-items { overflow-y:auto; min-height: 100%; position: static; padding-top:0; margin-top:130px;}
 	.top-nav { position: relative; top:auto; left:0; margin-top:0;}
 	.dcc-socials { position: relative; padding:25px 0;}
 }

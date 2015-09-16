@@ -192,13 +192,13 @@ jQdcc(document).ready(function($){
 						$('#dcc-intro').remove();
 						$('.skip-typed-button').on('click', function(e){
 							e.preventDefault();
-							$(this).fadeOut(250);
+							$(this).hide();
 							$('.normal-typed').hide();
 							$('.skip-typed').show();
 
 							$('.lobby-button-container').addClass('active');
 						});
-						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 1, callback: function(e){$('.lobby-button-container').addClass('active');}});
+						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 1, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
 					},3000);
 				},4000);
 			},600);
@@ -578,17 +578,16 @@ function initImagesLoaded(){
 	$('#dcc-intro, #header, #dcc-lobby').imagesLoaded().progress(function(e){
 		var imgLen = e.images.length;
 		console.log(imgLen);
-		valProgress++;
+		valProgress++   ;
 		setProgress(valProgress,imgLen);
 	}).done(function(e){
-		$('.dcc-preloader').delay(1500).fadeOut(300);
+		$('.dcc-preloader').delay(2000).fadeOut(600);
 		checkImagesLoaded();
-        $('.predcc-zeppelin').addClass("dcc-zeppelin");
 	});
 }
 function setProgress(valProgress,imgLen){
 	var val = (valProgress / imgLen) * 100;
-    var percentage = val.toFixed(0);
+	var percentage = val.toFixed(0);
 	$('.progress').css('height',val+'%');
 	$('.progress-val').html(percentage+'%');
 } 

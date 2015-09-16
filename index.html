@@ -11,18 +11,15 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontface.css">
 	<link rel="stylesheet" type="text/css" href="css/cframe.min.css">
-	<style>.dcc-preloader{top:0;right:0;bottom:0;left:0;z-index:25;background-color:#ebebeb;position:absolute}.dcc-preloader>div{-webkit-transition:all ease .5s;transition:all ease .5s;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}.dcc-preloader img{top:50%;left:50%;position:absolute;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:250px;z-index:1}.progress-bar{bottom:42.2%;transform:translate(-50%,-50%);width:54px;height:64px;background:#b4b4b4;z-index:2}.progress-bar,.progress-val{left:50%;position:absolute;-webkit-transform:translate(-50%,-50%)}.progress{width:54px;background:#6bbcff;bottom:0;position:absolute}.progress-val{top:55%;transform:translate(-50%,-50%);color:#6bbcff;font-size:16px;font-weight:700;z-index:3}.logo-preload{bottom:42%;left:50%;transform:translate(-50%,-50%);width:54px;height:65px;z-index:3}.logo-preload,.sub-preloader span{position:absolute;-webkit-transform:translate(-50%,-50%)}.sub-preloader{top:0;right:0;bottom:0;left:0;z-index:23;background:url(img/sub-preloader.gif) center no-repeat #ebebeb;position:absolute}.sub-preloader span{top:50%;left:50%;transform:translate(-50%,-50%);color:#6bbcff}
+	<style>.dcc-preloader {position: absolute;top: 0;left: 0;right: 0;bottom: 0;background-color: #dcdddf;z-index: 99;height: 100%;}.dcc-preloader > div {-webkit-transition: all ease .5s;transition: all ease .5s;-webkit-transform-origin: 50% 50%;transform-origin: 50% 50%;}.progress-bar {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 64px;background: #b4b4b4;z-index: 2;}.progress {width: 54px;height: 0%;background: #6bbcff;}.progress-val {color: #6bbcff;font-size: 16px;font-weight: bold;}.logo-preload {position: absolute;left: 50%;top: 48.5%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 54px;height: 65px;z-index: 3;}.main-preload {position: absolute;left: 50%;top: 50%;margin: 0;margin-right: -50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);width: 250px;z-index: 1;} .sub-preloader { top:0;right:0;bottom:0;left:0; z-index: 23; background: #ebebeb url(img/sub-preloader.gif) no-repeat center; position: absolute;} .sub-preloader span {	top: 50%;	left: 50%;position: absolute;-webkit-transform: translate(-50%,-50%);	transform: translate(-50%,-50%);color: #6bbcff;}
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body class="home" data-state="0">
 	
 	<div class="dcc-preloader">
-        <img src="img/preload.gif">
-		<div class="progress-bar">
-		    <div class="progress"></div>
-        </div>
-        <div class="progress-val text-center">0%</div>
+		<div class="progress-bar"><div class="progress"></div><div class="progress-val text-center"></div></div>
+		<div class="main-preload"><img src="img/preload.gif"></div>
 		<div class="logo-preload"><img src="img/logo-preload.png"></div>
 	</div>
 	
@@ -70,7 +67,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="predcc-zeppelin">
+				<div class="dcc-zeppelin">
 					<div class="front-zeppelin">
 						<div class="zep-img"><img src="img/zeppelin.png" alt="Zeppelin"></div>
 						<div class="zep-led"><a href="#"><img src="img/zep-led.jpg" alt="LED"></a></div>
@@ -458,13 +455,7 @@
 										<a href="#dragon-bebek" class="dragon-btn">+</a>
 										<div class="popup-content open-top-left">
 											<img src="img/dragoners/bebek.png" alt="">
-											<div class="details">
-												<h4>Mascot</h4>
-												<h5>Mascot</h5>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab dolor veritatis odio unde, accusantium repellat. Natus, illo illum, laudantium, dicta deleniti quisquam dolorem tempore officiis optio architecto, blanditiis ipsum!</p>
-												<h6>Skills &amp; Special Attribute</h6>
-												<p>Lorem ipsum dolor sit amet.</p>
-											</div>
+											<h4>Cips</h4>
 										</div>
 									</div>
 
@@ -586,7 +577,7 @@
 											<img src="img/dragoners/dike.png" alt="">
 											<div class="details">
 												<h4>Dike Faisal Akbar</h4>
-												<h5>Fabulous Jedi</h5>
+												<h5>Prince of Marvel</h5>
 												<p>A fabulous person in DCC. He has a passion to draw since in his mother's womb, and is striving to expand his skill. Having so many dreams sure is fun and challenging, but his number one on the list is to be a notable, inspirational figure, like Sir Walt Disney. He is very fond of The Beatles, Bee Gees, and 90's movies.</p>
 												<h6>Skills &amp; Special Attribute</h6>
 												<p>Intergalactic Worker, Anatomist, Fabulous Hair</p>
@@ -642,7 +633,7 @@
 											<img src="img/dragoners/fano.png" alt="">
 											<div class="details">
 												<h4>Stepfano</h4>
-												<h5>Chief Entertainment Officer</h5>
+												<h5>The Notorious Giant</h5>
 												<p>A guy who loves challenges and dislikes monotonous routine, which is why he chose his career in start-up company. His long time passion in physic, math, logic and psychology nurtured him well to face problems which involve attention to details and logic. He is a problem solver who loves to meet new people.</p>
 												<h6>Skills &amp; Special Attribute</h6>
 												<p>User Centered Design, Data Collecting, Wireframe Designing, User Interview</p>
@@ -678,15 +669,9 @@
 
 									<div class="dragon dragon-bear">
 										<a href="#dragon-bear" class="dragon-btn">+</a>
-										<div class="popup-content open-top-left">
+										<div class="popup-content mascot-popup open-top-left">
 											<img src="img/dragoners/bear.png" alt="">
-											<div class="details">
-												<h4>Mascot</h4>
-												<h5>Mascot</h5>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab dolor veritatis odio unde, accusantium repellat. Natus, illo illum, laudantium, dicta deleniti quisquam dolorem tempore officiis optio architecto, blanditiis ipsum!</p>
-												<h6>Skills &amp; Special Attribute</h6>
-												<p>Lorem ipsum dolor sit amet.</p>
-											</div>
+											<h4>Coco</h4>
 										</div>
 									</div>
 
@@ -970,15 +955,9 @@
 
 									<div class="dragon dragon-cat">
 										<a href="#dragon-cat" class="dragon-btn">+</a>
-										<div class="popup-content open-top-right">
-											<img src="img/dragoners/van.png" alt="">
-											<div class="details">
-												<h4>Mascot</h4>
-												<h5>Mascot</h5>
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ab dolor veritatis odio unde, accusantium repellat. Natus, illo illum, laudantium, dicta deleniti quisquam dolorem tempore officiis optio architecto, blanditiis ipsum!</p>
-												<h6>Skills &amp; Special Attribute</h6>
-												<p>Lorem ipsum dolor sit amet.</p>
-											</div>
+										<div class="popup-content mascot-popup open-top-right">
+											<img src="img/dragoners/cat.png" alt="">
+											<h4>Cookie</h4>
 										</div>
 									</div>
 
@@ -1176,6 +1155,9 @@
 									<div class="centered-content" id="lobby-content">
 										<div class="content">
 											<h2>Start the future now!</h2>
+											<div class="skip-container">
+												<a href="#skip" class="skip-typed-button">Skip This <span class="fa fa-fast-forward"></span></a>
+											</div>
 											<div class="normal-typed">
 												<p><span class="paragraph"></span></p>
 											</div>
@@ -1186,9 +1168,7 @@
 												<a class="btn-begin btn-meet-us rippling"><span><img src="img/meet-us-button.png" alt=""></span></a>
 												<a class="btn-begin btn-watch-us rippling"><span><img src="img/watch-us-button.png" alt=""></span></a>
 											</div>
-											<div class="skip-container">
-												<a href="#skip" class="skip-typed-button">Skip This <span class="fa fa-fast-forward"></span></a>
-											</div>
+											
 										</div>
 
 									</div>
