@@ -581,15 +581,15 @@ function initImagesLoaded(){
 		valProgress++   ;
 		setProgress(valProgress,imgLen);
 	}).done(function(e){
-		$('.dcc-preloader').delay(2000).fadeOut(600);
+		$('.dcc-preloader').delay(1500).fadeOut(300);
 		checkImagesLoaded();
+        $('.predcc-zeppelin').addClass("dcc-zeppelin");
 	});
 }
 function setProgress(valProgress,imgLen){
 	var val = (valProgress / imgLen) * 100;
-	var percentage = val.toFixed(0);
 	$('.progress').css('height',val+'%');
-	$('.progress-val').html(percentage+'%');
+	$('.progress-val').html(val.toFixed(0)+'%');
 } 
 
 function loadHQ(){

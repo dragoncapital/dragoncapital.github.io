@@ -893,13 +893,13 @@ body.home .dcc-nav {
     -webkit-animation: planetarium 2s infinite;
     animation: planetarium 2s infinite;
 }
-.front-zeppelin { 
+.dcc-zeppelin .front-zeppelin { 
     position: absolute; 
     width: 300px;
     -webkit-animation: front-zeppelin 40s linear infinite;
     animation: front-zeppelin 40s linear infinite;
 }
-.back-zeppelin { 
+.dcc-zeppelin .back-zeppelin { 
     position: absolute; 
     width: 300px;
     -webkit-animation: back-zeppelin 40s linear infinite;
@@ -908,10 +908,10 @@ body.home .dcc-nav {
     animation-delay: 20s;
     opacity: 0;
 }
-.zep-img {height: 121px; padding-right: 10px;}
-.zep-img img {height: 121px;}
-.zep-led {width: 100%; text-align: center;}
-.zep-led img {width: 50%;}
+.dcc-zeppelin .front-zeppelin .zep-img {height: 121px; padding-right: 10px;}
+.dcc-zeppelin .front-zeppelin .zep-img img {height: 121px;}
+.dcc-zeppelin .front-zeppelin .zep-led {width: 100%; text-align: center;}
+.dcc-zeppelin .front-zeppelin .zep-led img {width: 50%;}
 
 /* Lobby Section */
 #lobby-content {
