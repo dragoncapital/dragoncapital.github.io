@@ -588,8 +588,9 @@ function initImagesLoaded(){
 }
 function setProgress(valProgress,imgLen){
 	var val = (valProgress / imgLen) * 100;
+    var percentage = val.toFixed(0);
 	$('.progress').css('height',val+'%');
-	$('.progress-val').html(val.toFixed(0)+'%');
+	$('.progress-val').html(percentage+'%');
 } 
 
 function loadHQ(){
