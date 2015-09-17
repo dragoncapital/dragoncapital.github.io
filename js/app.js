@@ -220,7 +220,7 @@ function initLobby(){
 	});
 	var interval;
 	var iv = 50;
-	$('.drag-nav-lobby .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-lobby .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-lobby .draggable').width();
 		interval = setInterval(function(e){
@@ -240,7 +240,7 @@ function initLobby(){
 		clearInterval(interval);
 		iv=1;
 	});
-	$('.drag-nav-lobby .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-lobby .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-lobby .draggable').width();
 		interval = setInterval(function(e){
@@ -278,7 +278,7 @@ function initDev(){
 	});
 	var interval;
 	var iv = 50;
-	$('.drag-nav-developer .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-developer .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-developer .draggable').width();
 		interval = setInterval(function(e){
@@ -298,7 +298,7 @@ function initDev(){
 		clearInterval(interval);
 		iv=1;
 	});
-	$('.drag-nav-developer .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-developer .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-developer .draggable').width();
 		interval = setInterval(function(e){
@@ -336,7 +336,7 @@ function initCreative(){
 	});
 	var interval;
 	var iv = 50;
-	$('.drag-nav-creative .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-creative .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-creative .draggable').width();
 		interval = setInterval(function(e){
@@ -356,7 +356,7 @@ function initCreative(){
 		clearInterval(interval);
 		iv=1;
 	});
-	$('.drag-nav-creative .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-creative .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-creative .draggable').width();
 		interval = setInterval(function(e){
@@ -394,7 +394,7 @@ function initIllustrator(){
 	});
 	var interval;
 	var iv = 50;
-	$('.drag-nav-illustrator .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-illustrator .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-illustrator .draggable').width();
 		interval = setInterval(function(e){
@@ -414,7 +414,7 @@ function initIllustrator(){
 		clearInterval(interval);
 		iv=1;
 	});
-	$('.drag-nav-illustrator .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-illustrator .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-illustrator .draggable').width();
 		interval = setInterval(function(e){
@@ -459,7 +459,7 @@ function initRooftop(){
 	});
 	var interval;
 	var iv = 50;
-	$('.drag-nav-rooftop .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-rooftop .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-rooftop .draggable').width();
 		interval = setInterval(function(e){
@@ -479,7 +479,7 @@ function initRooftop(){
 		clearInterval(interval);
 		iv=1;
 	});
-	$('.drag-nav-rooftop .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-rooftop .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-rooftop .draggable').width();
 		interval = setInterval(function(e){
@@ -520,7 +520,7 @@ function initOutspace(){
 	});
 	var interval;
 	var iv = 50;
-	$('.drag-nav-outspace .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-outspace .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-outspace .draggable').width();
 		interval = setInterval(function(e){
@@ -540,7 +540,7 @@ function initOutspace(){
 		clearInterval(interval);
 		iv=1;
 	});
-	$('.drag-nav-outspace .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-outspace .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		var elW = $('#dcc-outspace .draggable').width();
 		interval = setInterval(function(e){
@@ -563,7 +563,7 @@ function initOutspace(){
 	var curSlide = 'dev';
 	var nextSlide = 'creative';
 	var prevSlide = '';
-	$('.drag-nav-outspace-mobile .draggie.drag-next').on('mousedown click touchstart', function(e){
+	$('.drag-nav-outspace-mobile .draggie.drag-next').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		if(nextSlide != ''){
 			$('.dcc-space .planet.planet-'+nextSlide).css('transform','translateX(0)');
@@ -578,7 +578,7 @@ function initOutspace(){
 		}
 		console.log(prevSlide);
 	});
-	$('.drag-nav-outspace-mobile .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-outspace-mobile .draggie.drag-prev').on('mousedown touchstart', function(e){
 		e.preventDefault();
 		if(prevSlide != ''){
 			$('.dcc-space .planet.planet-'+prevSlide).css('transform','translateX(0)');
