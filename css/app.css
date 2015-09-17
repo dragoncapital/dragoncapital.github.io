@@ -32,21 +32,21 @@
 	0% {
 		-webkit-transform: scale(1);
 		transform: scale(1);
-		opacity: .6;
+		opacity: 1;
 	}
 	100% {
-		-webkit-transform: scale(1.6);
-		transform: scale(1.6);
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
 		opacity: 0;
 	}
 }
 @keyframes ripple {
 	0% {
 		transform: scale(1);
-		opacity: .6;
+		opacity: 1;
 	}
 	100% {
-		transform: scale(1.6);
+		transform: scale(1.5);
 		opacity: 0;
 	}
 }
@@ -56,21 +56,21 @@
 	0% {
 		-webkit-transform: scale(1);
 		transform: scale(1);
-		opacity: .5;
+		opacity: 1;
 	}
 	100% {
-		-webkit-transform: scale(1.5);
-		transform: scale(1.5);
+		-webkit-transform: scale(1.4);
+		transform: scale(1.4);
 		opacity: 0;
 	}
 }
 @keyframes inner-ripple {
 	0% {
 		transform: scale(1);
-		opacity: .5
+		opacity: 1
 	}
 	100% {
-		transform: scale(1.5);
+		transform: scale(1.4);
 		opacity: 0;
 	}
 }
@@ -911,11 +911,12 @@ body.home .dcc-nav {
 	margin-left: -40px;
 	position: absolute;
 	z-index: 1;
-	background: #fff;
+	background: transparent;
+	border:1px solid #fff;
 	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
-	-webkit-animation: ripple 1s infinite ease-in-out;
-	animation: ripple 2s infinite ease ease-in-out;
+	-webkit-animation: ripple 3s infinite;
+	animation: ripple 3s infinite linear;
 }
 .rippling:after {
 	display: block;
@@ -928,11 +929,12 @@ body.home .dcc-nav {
 	margin-left: -40px;
 	position: absolute;
 	z-index: 2;
-	background: #fff;
+		background: transparent;
+	border:1px solid #fff;
 	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
-	-webkit-animation: inner-ripple 1s infinite ease-in-out;
-	animation: inner-ripple 2s .5s infinite ease-in-out;
+	-webkit-animation: inner-ripple 3s 1.5s infinite linear;
+	animation: inner-ripple 3s 1.5s infinite linear;
 }
 
 /* Homepage */
@@ -1396,11 +1398,11 @@ a.btn-begin {
 }
 .rocket {
 	position: relative;
+	-webkit-animation:shake .2s infinite;
+	animation:shake .2s infinite;
 }
 .rocket-body {
 	position: relative; z-index: 5;
-	-webkit-animation:shake .2s infinite;
-	animation:shake .2s infinite;
 }
 .rocket-body img {
 	width:100%;
@@ -1417,15 +1419,13 @@ a.btn-begin {
 	position: absolute;
 	z-index: 3;
 	left:50%; margin-left:-50px;
-	-webkit-animation:shake .2s infinite;
-	animation:shake .2s infinite;
 }
 .fire-animation {
 	width:100px;
 	height:300px;
 	background-size:1000px 300px;
 	background:url(../img/rocket-fire.png) no-repeat left top;
-	transform:translate3d(0,-300px,0);
+	transform:translate3d(0,-100px,0) scale(0);
 }
 .rocket-smoke {	
 	position: absolute;
@@ -1443,7 +1443,7 @@ a.btn-begin {
 	display: none;
 	opacity: 0;
 }
-.rocket-holder.active .rocket-body {
+.rocket-holder.active .rocket {
 	-webkit-animation:shake2 .1s infinite;
 	animation:shake2 .1s infinite;
 }
@@ -1454,7 +1454,7 @@ a.btn-begin {
 .rocket-holder.active .fire-animation {
 	-webkit-animation:2s steps(9, end) 0s normal none infinite running mascot;
 	animation:2s steps(9, end) 0s normal none infinite running mascot;
-	transform:translate3d(0,120px,0);
+	transform:translate3d(0,120px,0) scale(1);
 	transition:transform ease 3s;
 	transition-delay:3s;
 }
