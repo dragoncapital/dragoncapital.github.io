@@ -145,6 +145,8 @@ jQdcc(document).ready(function($){
 			}
 		});
 
+		$('.menu-items').perfectScrollbar();
+
 		$('.dcc-nav .up').on('click', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && state<6){
@@ -556,6 +558,7 @@ function initOutspace(){
 		clearInterval(interval);
 		iv=1;
 	});
+	$('.popup-content').perfectScrollbar();
 }
 
 function initParallax(){
@@ -577,7 +580,6 @@ function initImagesLoaded(){
 	var valProgress = 0;
 	$('#dcc-intro, #header, #dcc-lobby').imagesLoaded().progress(function(e){
 		var imgLen = e.images.length;
-		console.log(imgLen);
 		valProgress++   ;
 		setProgress(valProgress,imgLen);
 	}).done(function(e){
