@@ -333,7 +333,7 @@ function initCreative(){
 		$('.top-nav li.f3 a span.enabled').css('width',curProgress+'%');
 		$('#preload-creative span').html(curProgress+'%');
 	}).done(function(e){
-		dccCreative = new IScroll('#dcc-creative', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
+		dccCreative = new IScroll('#dcc-creative', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
 		$('.top-nav li.f3 a span.enabled').css('width','100%');
 		$('#preload-creative').fadeOut(250);
 	});
@@ -391,7 +391,7 @@ function initIllustrator(){
 		$('.top-nav li.f4 a span.enabled').css('width',curProgress+'%');
 		$('#preload-illustrator span').html(curProgress+'%');
 	}).done(function(e){
-		dccIllustrator = new IScroll('#dcc-illustrator', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
+		dccIllustrator = new IScroll('#dcc-illustrator', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
 		$('.top-nav li.f4 a span.enabled').css('width','100%');
 		$('#preload-illustrator').fadeOut(250);
 	});

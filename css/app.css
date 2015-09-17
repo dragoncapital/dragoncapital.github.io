@@ -883,6 +883,8 @@ body.home .dcc-nav {
 	bottom:90px;
 	cursor: pointer;
 	z-index: 2;
+	-webkit-transition:all ease-in-out .25s;
+	transition:all ease-in-out .25s;
 }
 .draggie:hover, .draggie:active, .draggie:focus {
 	background:rgba(255,255,255,.6);
@@ -894,6 +896,9 @@ body.home .dcc-nav {
 .draggie.drag-next {
 	right:-155px;
 }
+
+body.disable-nav .draggie.drag-prev { -webkit-transform:translateX(-100px);transform:translateX(-100px);}
+body.disable-nav .draggie.drag-next { -webkit-transform:translateX(100px);transform:translateX(100px)}
 
 /* Aux */
 .rippling {
@@ -1474,6 +1479,7 @@ a.btn-begin {
 	top: 26%;
 	left: 50%;
 	margin-left: -56px;
+	z-index: 7;
 }
 .btn-launch span {
 	position: relative;
