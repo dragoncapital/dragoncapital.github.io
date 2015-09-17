@@ -22,6 +22,7 @@ jQdcc(document).ready(function($){
 			if(state==6){
 				$('.dcc-container').addClass('launched');
 				$('.rocket-holder').addClass('active');
+				$('.rocket-holder').css({'transform':'translate3d(0,-'+h*3+'px, 0) scale(0)'});
 			}
 			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
 		}
@@ -29,8 +30,9 @@ jQdcc(document).ready(function($){
 			setTimeout(function(e){
 				$('.dcc-container').removeClass('launched');
 				$('.rocket-holder').removeClass('active');
+				$('.rocket-holder').css({'transform':'translate3d(0,0, 0) scale(1)'});
 				$('.dcc-nav').removeClass('disabled');
-			},8000);
+			},10000);
 		}else{
 			setTimeout(function(e){
 				$('.dcc-nav').removeClass('disabled');
