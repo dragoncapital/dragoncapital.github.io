@@ -1957,8 +1957,8 @@ a.btn-begin {
 	}
 }
 
-/* Mobile Small Media Queries */
-@media only screen and (max-width: 360px) {
+/* Mobile Small Media Queries and Portrait */
+@media only screen and (max-width: 480px) and (orientation:portrait) {
 	.dcc-space .planet.planet-dev {
 		width: 25%;
 		height: auto;
@@ -1996,4 +1996,7 @@ a.btn-begin {
 		width: 100%;
 		margin: 2px;
 	}
+}
+@media only screen and (max-width: 360px){
+
 }
