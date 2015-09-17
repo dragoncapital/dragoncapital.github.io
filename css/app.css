@@ -884,7 +884,7 @@ body.home .dcc-nav {
 	cursor: pointer;
 	z-index: 2;
 }
-.draggie:hover, .draggie:active {
+.draggie:hover, .draggie:active, .draggie:focus {
 	background:rgba(255,255,255,.6);
 }
 .draggie.drag-prev {
