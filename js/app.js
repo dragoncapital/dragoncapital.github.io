@@ -96,6 +96,7 @@ jQdcc(document).ready(function($){
 		$('.mascot-bear .mascot').css({'width':(nWx*0.04375)+'px','height':(h*0.234375)+'px','background-size':((nWx*0.04375)*40)+'px '+(h*0.234375)+'px'});
 		$('.mascot-bebek .mascot').css({'width':(nWx*0.0325)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.0325)*25)+'px '+(h*0.21484375)+'px'});
 		$('.mascot-cat .mascot').css({'width':(nWx*0.05)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.05)*25)+'px '+(h*0.21484375)+'px'});
+		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');
 	}
 	function enableNav(){
 		$('body').removeClass('disable-nav');
@@ -648,10 +649,19 @@ function initPopup(){
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
 			$(this).parent().addClass('active');
+			$('body').append('<div class="team-reveal-bg"></div><div class="team-reveal-modal">'+$(this).parent().find('.popup-content').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
+			$('.team-reveal-modal .details').perfectScrollbar();
 		}else {
 			$('.dragon').removeClass('active');
 			enableNav();			
-		}			
+		}
+		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click touchend', function(e){
+			e.preventDefault();
+			$('body').find('.team-reveal-bg').remove();
+			$('body').find('.team-reveal-modal').remove();
+			$('.dragon').removeClass('active');
+			enableNav();
+		});
 	})
 
 	$('.dragon-bg').on('click touchend', function(e){
@@ -666,16 +676,18 @@ function initReveal(){
 	$('.dragon-hiring > a').on('click touchend', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
-		$('#dcc-outspace').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'</div>');
+		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
+		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav();
 
-		$('#dcc-outspace').find('.reveal-modal a.close-reveal, .reveal-bg').on('click touchend', function(e){
+		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click touchend', function(e){
 			e.preventDefault();
-			$('#dcc-outspace').find('.reveal-bg').remove();
-			$('#dcc-outspace').find('.reveal-modal').remove();
+			$('body').find('.reveal-bg').remove();
+			$('body').find('.reveal-modal').remove();
 			enableNav();
 		})
 	});
+	
 }
 
 function initCentered(){
@@ -689,8 +701,8 @@ function initEsc(){
 			if($('body').hasClass('disable-nav')){
 				e.preventDefault();
 				$('.dragon').removeClass('active');
-				$('#dcc-outspace').find('.reveal-bg').remove();
-				$('#dcc-outspace').find('.reveal-modal').remove();
+				$('body').find('.reveal-bg, .team-reveal-bg').remove();
+				$('body').find('.reveal-modal, .team-reveal-modal').remove();
 				enableNav();
 			}
 		}

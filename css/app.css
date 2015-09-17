@@ -929,7 +929,7 @@ body.home .dcc-nav {
 	margin-left: -40px;
 	position: absolute;
 	z-index: 2;
-		background: transparent;
+	background: transparent;
 	border:1px solid #fff;
 	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
@@ -1670,6 +1670,9 @@ a.btn-begin {
 	line-height: 1.4;
 	font-size: 14px;
 }
+.reveal-modal .hiring-content {
+	position: relative;
+}
 .reveal-modal .hiring-content h3 {
 	font-size: 24px;
 	margin: 0 0 24px;
@@ -1689,24 +1692,86 @@ a.btn-begin {
 }
 .reveal-modal .close-reveal {
 	position: absolute;
-	width: 30px;
-	height: 30px;
-	line-height: 28px;
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
 	text-align: center;
-	border: 2px solid #939598;
-	background: #fff;
+	background: url(../img/dragon-button.png) no-repeat center; background-size:cover;
 	-webkit-border-radius: 1000px;
 	border-radius: 1000px;
 	top: -15px;
 	right: -15px;
 	z-index: 46;
 	color: #000;
-	-webkit-transform-origin: 50% 50%;
-	transform-origin: 50% 50%;
+	text-indent: -9999px;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
-	-webkit-box-shadow: 0 0 8px #000;
-	box-shadow: 0 0 8px #000;
+	-webkit-box-shadow: 0 0 3px #000;
+	box-shadow: 0 0 3px #000;
+	cursor:pointer;
+}
+.reveal-modal .close-reveal span {
+	display:none; width:26px; height:26px; background: url(../img/dragon-button.png) no-repeat center; background-size:cover; margin-left:5px; vertical-align: middle; transform:rotate(45deg);
+	cursor:pointer;
+}
+
+/* Team Reveal */
+.team-reveal {
+	display: none;
+}
+.team-reveal-bg {
+	position: fixed;
+	z-index: 44;
+	background: #000;
+	background: rgba(0, 0, 0, .5);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	display: none;
+}
+.team-reveal-modal {
+	position: absolute;
+	z-index: 45;
+	top:0;right:0;bottom:0;left:0;
+	background: #fff;
+	background: rgba(255, 255, 255, .85);
+	display: none;
+	padding:36px 15px 15px;
+}
+.team-reveal-modal a {
+	color: #000;
+}
+.team-reveal-modal p {
+	margin-bottom: 14px;
+	line-height: 1.4;
+	font-size: 14px;
+}
+.team-reveal-modal img {
+	float:left; width:35%;
+}
+.team-reveal-modal .details {
+	float:right; width:65%; padding:0 15px;
+	max-height:100%;
+	position: relative;
+}
+.team-reveal-modal .close-reveal {
+	position: absolute;
+	display:inline-block;
+	line-height: 26px;
+	text-align: center;	
+	top: 5px;
+	right: 5px;
+	z-index: 46;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+	cursor:pointer;
+}
+.team-reveal-modal .close-reveal span {
+	display: inline-block; width:26px; height:26px; background: url(../img/dragon-button.png) no-repeat center; background-size:cover; margin-left:5px; vertical-align: middle; transform:rotate(45deg);
+	cursor:pointer;
 }
 
 @media only screen and (min-width:1600px) {
@@ -1774,23 +1839,6 @@ a.btn-begin {
 	.menu-items { overflow-y:auto; min-height: 100%; position: relative; padding-top:0;}
 	.top-nav { position: relative; top:auto; left:0; margin-top:0;}
 	.dcc-socials { position: relative; padding:25px 0;}
-}
-
-/* Tablet iPad and Portrait and Medium Screen Media Queries */
-@media only screen and (max-width: 640px) and (orientation: portrait) {
-	#lobby-content {
-		width:600px;
-		left:50%; margin-left:-300px;
-		top:15%;
-	}
-	#dcc-lobby p {
-		font-size:22px;
-		line-height: 1.6;
-		margin:0 0 25px;
-	}
-	#dcc-lobby h2 {
-		font-size:48px;
-	}
 }
 
 /* Mobile Down and Small Screen Media Queries */
@@ -1963,14 +2011,70 @@ a.btn-begin {
 	}
 	.logo { left:64px; width:40px; top:14px; pointer-events:none; touch-event:none;}
 	body.menu-opened .logo {
-	left:64px;
+		left:64px;
 	}
 	.mainmenu { padding-top:90px;}
 	.dcc-nav { bottom:5px; right:5px;}
+	.team-reveal-bg {
+		display: block
+	}
+	.team-reveal-modal {
+		display: block;
+	}
+	.popup-content { display: none;}
+	.dragon.active a { display: none;}
+	.team-reveal-modal {
+		text-align: center;
+	}
+	.team-reveal-modal img {
+		float:none; display: inline-block; height:50%; width:auto;
+	}
+	.team-reveal-modal .details {
+		text-align: left;
+		float:none; width:100%;
+		height:50%;
+		position: relative;
+	}
+
+	.reveal-modal {
+		position: absolute; top:0; right:0; bottom:0; left:0;
+		padding:36px 15px 15px;
+		width:100%; margin:0 !important; border-radius:0; border:none;
+	}
+
+	.reveal-modal .close-reveal {
+		text-indent: 0;
+		background:none;
+		top:5px; right:5px; box-shadow:none;
+		transform:none;
+		width:auto;
+		font-size:14px;
+		font-weight: bold;
+	}
+	.reveal-modal .close-reveal span { display: inline-block}
+	.reveal-modal .hiring-content { padding:0; height:85%;}
+	.reveal-modal .hiring-footer { padding:15px; position: absolute; bottom:0; left:0; right:0;}
 } 
 
+/* Tablet iPad and Portrait and Medium Screen Media Queries */
+@media only screen and (max-width: 640px) and (orientation: portrait) {
+	#lobby-content {
+		width:600px;
+		left:50%; margin-left:-300px;
+		top:15%;
+	}
+	#dcc-lobby p {
+		font-size:22px;
+		line-height: 1.6;
+		margin:0 0 25px;
+	}
+	#dcc-lobby h2 {
+		font-size:48px;
+	}
+}
+
 @media only screen and (max-width:600px){
-		#dcc-lobby h2 {
+	#dcc-lobby h2 {
 		color:#fff;
 		font-size:24px;
 		margin:0 0 10px;
@@ -1983,10 +2087,11 @@ a.btn-begin {
 	#lobby-content {
 		width:420px;
 		margin-left:-210px;
+		left:50%;
 	}
 }
 @media only screen and (max-height:640px){
-		#dcc-lobby h2 {
+	#dcc-lobby h2 {
 		color:#fff;
 		font-size:22px;
 		margin:0 0 10px;
@@ -2051,4 +2156,14 @@ a.btn-begin {
 	.dragon a.dragon-btn {
 		width:16px; height:16px;
 	}
+	.draggie { bottom:60px;}
+}
+@media only screen and (max-height:480px) and (orientation:landscape){
+	#dcc-lobby h2 { font-size:16px;}
+	#dcc-lobby p { font-size:12px; line-height: 1.4; margin:0 0 5px;}
+	#lobby-content {
+		top:10%; width:380px;
+		margin-left:-190px;
+	}
+	.skip-container { bottom:5%;}
 }
