@@ -590,8 +590,9 @@ function initImagesLoaded(){
 }
 function setProgress(valProgress,imgLen){
 	var val = (valProgress / imgLen) * 100;
-	$('.progress').css('height',val+'%');
-	$('.progress-val').html(val.toFixed(0)+'%');
+	var height = (valProgress / imgLen) * 70;
+	$('.dp-progressfront').css('height',height+'px');
+	$('.dp-progressval').html(val.toFixed(0)+'%');
 } 
 
 function loadHQ(){

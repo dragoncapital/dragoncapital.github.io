@@ -11,19 +11,22 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontface.css">
 	<link rel="stylesheet" type="text/css" href="css/cframe.min.css">
-	<style>.dcc-preloader{top:0;right:0;bottom:0;left:0;z-index:25;background-color:#ebebeb;position:absolute}.dcc-preloader>div{-webkit-transition:all ease .5s;transition:all ease .5s;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}.dcc-preloader img{top:50%;left:50%;position:absolute;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:250px;z-index:1}.progress-bar{bottom:42.2%;transform:translate(-50%,-50%);width:54px;height:64px;background:#b4b4b4;z-index:2}.progress-bar,.progress-val{left:50%;position:absolute;-webkit-transform:translate(-50%,-50%)}.progress{width:54px;background:#6bbcff;bottom:0;position:absolute}.progress-val{top:55%;transform:translate(-50%,-50%);color:#6bbcff;font-size:16px;font-weight:700;z-index:3}.logo-preload{bottom:42%;left:50%;transform:translate(-50%,-50%);width:54px;height:65px;z-index:3}.logo-preload,.sub-preloader span{position:absolute;-webkit-transform:translate(-50%,-50%)}.sub-preloader{top:0;right:0;bottom:0;left:0;z-index:23;background:url(img/sub-preloader.gif) center no-repeat #ebebeb;position:absolute}.sub-preloader span{top:50%;left:50%;transform:translate(-50%,-50%);color:#6bbcff}
+	<style>.dcc-preloader{top:0;right:0;bottom:0;left:0;z-index:25;background-color:#ebebeb;position:absolute}.dcc-preloader .dp-animate{width:250px}.dcc-preloader .dp-animate,.dcc-preloader .dp-container{top:50%;left:50%;position:absolute;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:1}.dcc-preloader .dp-container{position:absolute;width:60px}.dcc-preloader .dp-container .dp-progress{height:70px}.dcc-preloader .dp-container .dp-progress .dp-logo{top:0;position:absolute;width:60px;height:70px;z-index:3}.dcc-preloader .dp-container .dp-progress .dp-progressback{top:0;position:absolute;background-color:#b4b4b4;width:60px;height:70px;z-index:2}.dcc-preloader .dp-container .dp-progress .dp-progressfront{bottom:24px;position:absolute;background-color:#6bbcff;width:60px;z-index:2}.dcc-preloader .dp-container .dp-progressval{color:#6bbcff;font-size:16px;font-weight:700}.sub-preloader{top:0;right:0;bottom:0;left:0;z-index:23;background:url(img/sub-preloader.gif) center no-repeat #ebebeb;position:absolute}.sub-preloader span{top:50%;left:50%;position:absolute;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);color:#6bbcff}
 	</style>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body class="home" data-state="0">
 	
 	<div class="dcc-preloader">
-		<img src="img/preload.gif">
-		<div class="progress-bar">
-			<div class="progress"></div>
-		</div>
-		<div class="progress-val text-center">0%</div>
-		<div class="logo-preload"><img src="img/logo-preload.png"></div>
+		<div class="dp-animate"><img src="img/preload.gif"></div>
+        <div class="dp-container">
+            <div class="dp-progress">
+                <div class="dp-progressback"></div>
+                <div class="dp-progressfront"></div>
+                <div class="dp-logo"><img src="img/logo-preload.png"></div>
+            </div>
+            <div class="dp-progressval text-center">0%</div>
+        </div>
 	</div>
 	
 	<header id="header">		
