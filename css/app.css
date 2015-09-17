@@ -1985,6 +1985,10 @@ a.btn-begin {
 		color: #fff;
 		margin: 0 0 10px;
 	}
+	#lobby-content {
+		width:420px;
+		margin-left:-210px;
+	}
 }
 @media only screen and (max-height:640px){
 		#dcc-lobby h2 {
@@ -1999,6 +2003,12 @@ a.btn-begin {
 	}
 }
 
+@media only screen and (max-width: 480px){
+	#lobby-content {
+		width:300px;
+		margin-left:-150px;
+	}
+}
 /* Mobile Small Media Queries and Portrait */
 @media only screen and (max-width: 480px) and (orientation:portrait) {
 	.dcc-space .planet.planet-dev {
