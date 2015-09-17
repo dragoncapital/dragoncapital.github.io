@@ -991,6 +991,8 @@ a.btn-begin {
 	height: 80px;
 	display: inline-block;
 	cursor: pointer;
+	z-index: 98;
+	position: relative;
 }
 .lobby-button-container > a + a {
 	margin-left:50px;
@@ -1236,8 +1238,10 @@ a.btn-begin {
 	-webkit-transform: translate3d(0,-2648px,0) scale(0);
 	transform: translate3d(0,-2648px,0) scale(0);
 	opacity: .9;
-	-webkit-transition: all cubic-bezier(.98, 0, .9, .88) 7.5s;
-	transition: all cubic-bezier(.98, 0, .9, .88) 7.5s;
+	-webkit-transition: all 7.5s cubic-bezier(.98, 0, .9, .88);
+	transition: all 7.5s cubic-bezier(.98, 0, .9, .88);
+	-webkit-transition-delay:3s;
+	transition-delay:3s;
 }
 .btn-launch {
 	width: 102px;
@@ -1541,6 +1545,7 @@ a.btn-begin {
 	.menu-items { overflow-y:auto; min-height: 100%; position: relative; padding-top:0;}
 	.top-nav { position: relative; top:auto; left:0; margin-top:0;}
 	.dcc-socials { position: relative; padding:25px 0;}
+	.dcc-zeppelin { display: none;}
 }
 
 @media only screen and (max-height: 680px){
@@ -1551,7 +1556,6 @@ a.btn-begin {
 	.menu-items { overflow-y:auto; min-height: 100%; position: relative; padding-top:0;}
 	.top-nav { position: relative; top:auto; left:0; margin-top:0;}
 	.dcc-socials { position: relative; padding:25px 0;}
-	.dcc-zeppelin { display: none;}
 }
 
 /* Tablet iPad and Portrait and Medium Screen Media Queries */
