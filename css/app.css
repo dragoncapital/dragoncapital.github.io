@@ -1962,6 +1962,9 @@ a.btn-begin {
 		left:0; right:auto;
 	}
 	.logo { left:64px; width:40px; top:14px; pointer-events:none; touch-event:none;}
+	body.menu-opened .logo {
+	left:64px;
+	}
 	.mainmenu { padding-top:90px;}
 	.dcc-nav { bottom:5px; right:5px;}
 } 
