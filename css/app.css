@@ -1871,7 +1871,104 @@ a.btn-begin {
 		transform: rotateX(0deg);
 		z-index: 30;
 	}
+    
+    .dcc-space .planet {
+        display: block;
+        width: 33%;
+        position: absolute;
+        top: 50%;
+        -webkit-animation: none;
+        animation: none;
+    }
+    .dcc-space .planet.planet-dev {
+        width: 50%;
+        height: auto;
+        min-height:50%;
+        top:auto;
+        bottom:0;
+        left: 25%;
+        transition: all ease 2s;
+    }
+    .dcc-space .planet.planet-creative {
+        width: 40%;
+        height: auto;
+        min-height: 50%;
+        margin-top: 0;
+        top: -10%;
+        left: 25%;
+        -webkit-animation: none;
+        animation: none;
+        transition: all ease 2s;
+        transform: translateX(300%);
+    }
+    .dcc-space .planet.planet-illustrator {
+        width: 40%;
+        height: auto;
+        min-height: 50%;
+        margin-top: 0;
+        top: 0;
+        right: 33%;
+        -webkit-animation: none;
+        animation: none;
+        transition: all ease 2s;
+        transform: translateX(300%);
+    }
+    .planet-content {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+    }
+    .dragon-hiring {
+        position: static;
+        float: left;
+        width: 48%;
+        margin: 2px;
+    }
+    .drag-nav-outspace .drag-prev,.drag-nav-outspace .drag-next{
+        display: none;
+    }
 }
 
 /* Mobile Small Media Queries */
-@media only screen and (max-width: 360px) {}
+@media only screen and (max-width: 360px) {
+    .dcc-space .planet.planet-dev {
+        width: 25%;
+        height: auto;
+        min-height: 50%;
+        top: 25%;
+        bottom: 0;
+        left: 40%;
+    }
+    .dcc-space .planet.planet-dev .planet-content {
+        top: 10%;
+    }
+    .dcc-space .planet.planet-creative {
+        width: 25%;
+        height: auto;
+        min-height: 50%;
+        margin-top: 0;
+        top: 10%;
+        left: 38%;
+        -webkit-animation: none;
+        animation: none;
+    }
+    .dcc-space .planet.planet-illustrator {
+        width: 25%;
+        height: auto;
+        min-height: 50%;
+        margin-top: 0;
+        top: 10%;
+        right: 35%;
+        -webkit-animation: none;
+        animation: none;
+    }
+    .dragon-hiring {
+        position: static;
+        float: left;
+        width: 100%;
+        margin: 2px;
+    }
+}

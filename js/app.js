@@ -560,6 +560,38 @@ function initOutspace(){
 		clearInterval(interval);
 		iv=1;
 	});
+    var curSlide = 'dev';
+    var nextSlide = 'creative';
+    var prevSlide = '';
+    $('.drag-nav-outspace-mobile .draggie.drag-next').on('mousedown click touchstart', function(e){
+		e.preventDefault();
+		if(nextSlide != ''){
+            $('.dcc-space .planet.planet-'+nextSlide).css('transform','translateX(0)');
+            $('.dcc-space .planet.planet-'+curSlide).css('transform','translateX(-300%)');
+            prevSlide = curSlide;
+            curSlide = nextSlide;
+            if(curSlide == 'creative'){
+                nextSlide = 'illustrator';
+            } else {
+                nextSlide = '';
+            }
+        }
+        console.log(prevSlide);
+	});
+    $('.drag-nav-outspace-mobile .draggie.drag-prev').on('mousedown click touchstart', function(e){
+		e.preventDefault();
+		if(prevSlide != ''){
+            $('.dcc-space .planet.planet-'+prevSlide).css('transform','translateX(0)');
+            $('.dcc-space .planet.planet-'+curSlide).css('transform','translateX(300%)');
+            nextSlide = curSlide;
+            curSlide = prevSlide;
+            if(curSlide == 'creative'){
+                prevSlide = 'dev';
+            } else {
+                prevSlide = '';
+            }
+        }
+	});
 	$('.popup-content').perfectScrollbar();
 }
 
