@@ -187,6 +187,7 @@
 /* Standard Typography */
 body {
 	font-family: "Museo300";
+	overflow-y:hidden;
 }
 h1,
 h2,
@@ -952,11 +953,12 @@ body.home .dcc-nav {
 	text-align: center;
 }
 a.skip-typed-button {
-	display: inline-block; color:#fff; font-size:16px;
-	padding:5px 10px; background:#fff; background:rgba(255,255,255,.15);
+	display: inline-block; color:#fff; font-size:14px;
+	padding:2px 8px;
+	border:2px solid rgba(255,255,255,.85);
 	animation:blinking 10s infinite;
-	box-shadow:0 0 2px rgba(0,0,0,.15);
-	border-radius:4px;
+	-webkit-border-radius:1000px;
+	border-radius:1000px;
 }
 
 #dcc-lobby h2 {
