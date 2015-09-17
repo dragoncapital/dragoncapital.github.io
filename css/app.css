@@ -1809,10 +1809,6 @@ a.btn-begin {
 	a.btn-begin {
 		transform: scale(.8);
 	}
-	.mascot-holder {
-		-webkit-transform: scale(.5);
-		transform: scale(.5);
-	}
 	.popup-content {
 		border: none width: 100%;
 		height: 100%;
