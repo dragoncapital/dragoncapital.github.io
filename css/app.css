@@ -1138,8 +1138,8 @@ a.skip-typed-button {
 }
 .lobby-button-container {
 	opacity: 0;
-	-webkit-transform:scale(0);
-	transform:scale(0);
+	-webkit-transform:translate3d(0,0,0) scale(0);
+	transform:translate3d(0,0,0) scale(0);
 	-webkit-transform-origion: 50% 50%;
 	transform-origion: 50% 50%;
 	-webkit-transition:all 2s cubic-bezier(0.465, 0.183, 0.153, 0.946);
@@ -1147,8 +1147,8 @@ a.skip-typed-button {
 }
 .lobby-button-container.active {
 	opacity: 1;
-	-webkit-transform:scale(1) translate3d(0,10px,0);
-	transform:scale(1) translate3d(0,10px,0);
+	-webkit-transform:translate3d(0,10px,0) scale(1);
+	transform:translate3d(0,10px,0) scale(1);
 }
 a.btn-begin {
 	width: 80px;
@@ -1603,12 +1603,12 @@ a.btn-begin {
 	bottom: 3%;
 }
 .mascot-bear {
-	left: 48.5%;
-	bottom: 7%;
+	left: 48.7%;
+	bottom: 7.2%;
 }
 .mascot-bebek {
-	left: 46.5%;
-	bottom: 14%;
+	left: 47%;
+	bottom: 15%;
 }
 .mascot-cat .mascot {
 	-webkit-animation: mascot 1.5s steps(24) infinite;
@@ -1752,12 +1752,6 @@ a.btn-begin {
 }
 /* Large Screen (standard 13" notebook) Media Queries */
 @media only screen and (max-width: 1366px) {
-	.mascot-holder {
-		-webkit-transform-origin: 0% 100%;
-		transform-origin: 0% 100%;
-		-webkit-transform: scale(.75);
-		transform: scale(.75);		
-	}	
 }
 
 /* Tablet iPad Landscape and Normal Screen Media Queries */
@@ -1968,6 +1962,8 @@ a.btn-begin {
 		left:0; right:auto;
 	}
 	.logo { left:64px; width:40px; top:14px; pointer-events:none; touch-event:none;}
+	.mainmenu { padding-top:90px;}
+	.dcc-nav { bottom:5px; right:5px;}
 } 
 
 @media only screen and (max-width:600px){
@@ -2047,4 +2043,9 @@ a.btn-begin {
 }
 @media only screen and (max-width: 360px){
 
+}
+@media only screen and (max-height:480px){
+	.dragon a.dragon-btn {
+		width:16px; height:16px;
+	}
 }
