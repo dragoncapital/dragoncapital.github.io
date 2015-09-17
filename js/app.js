@@ -210,7 +210,7 @@ jQdcc(document).ready(function($){
 function initLobby(){
 	var lobbyStartX = (($('.draggable-normal').width() - w)/2)*-1;
 	dccLobby = new IScroll('#dcc-lobby', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ }, startX:lobbyStartX});
-	$('.btn-begin').on('click', function(e){
+	$('.btn-meet-us').on('click touchstart', function(e){
 		e.preventDefault();
 		if(!$('.dcc-nav').hasClass('disabled') && state==1){
 			gotoPage(2);
