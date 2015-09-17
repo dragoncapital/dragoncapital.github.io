@@ -205,7 +205,7 @@ jQdcc(document).ready(function($){
 						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 1, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
 					},3000);
 				},4000);
-			},600);
+},600);
 });
 }
 
@@ -560,37 +560,37 @@ function initOutspace(){
 		clearInterval(interval);
 		iv=1;
 	});
-    var curSlide = 'dev';
-    var nextSlide = 'creative';
-    var prevSlide = '';
-    $('.drag-nav-outspace-mobile .draggie.drag-next').on('mousedown click touchstart', function(e){
+	var curSlide = 'dev';
+	var nextSlide = 'creative';
+	var prevSlide = '';
+	$('.drag-nav-outspace-mobile .draggie.drag-next').on('mousedown click touchstart', function(e){
 		e.preventDefault();
 		if(nextSlide != ''){
-            $('.dcc-space .planet.planet-'+nextSlide).css('transform','translateX(0)');
-            $('.dcc-space .planet.planet-'+curSlide).css('transform','translateX(-300%)');
-            prevSlide = curSlide;
-            curSlide = nextSlide;
-            if(curSlide == 'creative'){
-                nextSlide = 'illustrator';
-            } else {
-                nextSlide = '';
-            }
-        }
-        console.log(prevSlide);
+			$('.dcc-space .planet.planet-'+nextSlide).css('transform','translateX(0)');
+			$('.dcc-space .planet.planet-'+curSlide).css('transform','translateX(-300%)');
+			prevSlide = curSlide;
+			curSlide = nextSlide;
+			if(curSlide == 'creative'){
+				nextSlide = 'illustrator';
+			} else {
+				nextSlide = '';
+			}
+		}
+		console.log(prevSlide);
 	});
-    $('.drag-nav-outspace-mobile .draggie.drag-prev').on('mousedown click touchstart', function(e){
+	$('.drag-nav-outspace-mobile .draggie.drag-prev').on('mousedown click touchstart', function(e){
 		e.preventDefault();
 		if(prevSlide != ''){
-            $('.dcc-space .planet.planet-'+prevSlide).css('transform','translateX(0)');
-            $('.dcc-space .planet.planet-'+curSlide).css('transform','translateX(300%)');
-            nextSlide = curSlide;
-            curSlide = prevSlide;
-            if(curSlide == 'creative'){
-                prevSlide = 'dev';
-            } else {
-                prevSlide = '';
-            }
-        }
+			$('.dcc-space .planet.planet-'+prevSlide).css('transform','translateX(0)');
+			$('.dcc-space .planet.planet-'+curSlide).css('transform','translateX(300%)');
+			nextSlide = curSlide;
+			curSlide = prevSlide;
+			if(curSlide == 'creative'){
+				prevSlide = 'dev';
+			} else {
+				prevSlide = '';
+			}
+		}
 	});
 	$('.popup-content').perfectScrollbar();
 }
@@ -619,7 +619,7 @@ function initImagesLoaded(){
 	}).done(function(e){
 		$('.dcc-preloader').delay(1500).fadeOut(300);
 		checkImagesLoaded();
-        $('.predcc-zeppelin').addClass("dcc-zeppelin");
+		$('.predcc-zeppelin').addClass("dcc-zeppelin");
 	});
 }
 function setProgress(valProgress,imgLen){
