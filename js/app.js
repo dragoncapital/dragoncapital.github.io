@@ -93,6 +93,9 @@ jQdcc(document).ready(function($){
 		$('.draggable-wide, .draggable-wide .drag-background, .drag-background img').width(nWx).height(h);
 		$('.dcc-draggable').height(h);
 		$('.sky-separator').css({'height':(h*2)+'px','background-size':nWs+'px '+(h*2)+'px'});
+		$('.mascot-bear .mascot').css({'width':(nWx*0.04375)+'px','height':(h*0.234375)+'px','background-size':((nWx*0.04375)*40)+'px '+(h*0.234375)+'px'});
+		$('.mascot-bebek .mascot').css({'width':(nWx*0.0325)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.0325)*25)+'px '+(h*0.21484375)+'px'});
+		$('.mascot-cat .mascot').css({'width':(nWx*0.05)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.05)*25)+'px '+(h*0.21484375)+'px'});
 	}
 	function enableNav(){
 		$('body').removeClass('disable-nav');
