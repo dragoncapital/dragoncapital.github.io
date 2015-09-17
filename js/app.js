@@ -178,7 +178,7 @@ jQdcc(document).ready(function($){
 		});
 	}
 	function start(){
-		$('.start-now').on('click', function(e){
+		$('.start-now').on('click touchend', function(e){
 			e.preventDefault();
 			state=1;
 			var initScroll = ((h*(6-state))+(50*(5-state))+(2*h))*-1;
@@ -641,7 +641,7 @@ function loadHQ(){
 }
 
 function initPopup(){
-	$('.dragon a').on('click', function(e){
+	$('.dragon a').on('click touchend', function(e){
 		e.preventDefault();		
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
@@ -652,7 +652,7 @@ function initPopup(){
 		}			
 	})
 
-	$('.dragon-bg').on('click', function(e){
+	$('.dragon-bg').on('click touchend', function(e){
 		e.preventDefault();		
 		$('.dragon').removeClass('active');
 		enableNav();
@@ -661,13 +661,13 @@ function initPopup(){
 
 }
 function initReveal(){
-	$('.dragon-hiring > a').on('click', function(e){
+	$('.dragon-hiring > a').on('click touchend', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
 		$('#dcc-outspace').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'</div>');
 		disableNav();
 
-		$('#dcc-outspace').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
+		$('#dcc-outspace').find('.reveal-modal a.close-reveal, .reveal-bg').on('click touchend', function(e){
 			e.preventDefault();
 			$('#dcc-outspace').find('.reveal-bg').remove();
 			$('#dcc-outspace').find('.reveal-modal').remove();
