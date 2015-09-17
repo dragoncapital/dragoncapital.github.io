@@ -2056,7 +2056,7 @@ a.btn-begin {
 	.reveal-modal .hiring-footer { padding:15px; position: absolute; bottom:0; left:0; right:0;}
 	.draggie { box-shadow:0 0 1px #000;}
 	.draggie.drag-prev { left:-145px;}
-	.draggie.drag-next { right:-14px;}
+	.draggie.drag-next { right:-145px;}
 } 
 
 /* Tablet iPad and Portrait and Medium Screen Media Queries */
