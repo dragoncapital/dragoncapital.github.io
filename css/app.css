@@ -1971,6 +1971,7 @@ a.btn-begin {
 	.mainmenu.active .menu-toggle {
 		left:0; right:auto;
 	}
+	.logo { left:64px; width:40px; top:14px;}
 }
 
 @media only screen and (max-width:600px){
