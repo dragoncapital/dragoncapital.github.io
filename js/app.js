@@ -126,10 +126,9 @@ jQdcc(document).ready(function($){
 
 		initImagesLoaded();
 
-		$('.logo a').on('click', function(e){
+		$('.logo a').on('click touchend', function(e){
 			e.preventDefault();
-			e.preventDefault();
-			if(!$('.dcc-nav').hasClass('disabled')){
+			if(!$('.dcc-nav').hasClass('disabled') && !$(body).hasClass('touch')){
 				gotoPage(1);
 			}
 		})
