@@ -139,33 +139,19 @@
 @-webkit-keyframes smoke {
 	0% {
 		background-position: left center;
-		opacity: 0;
-	}
-	1% {
-		opacity: 1
-	}
-	99% {
-		opacity: 1;
 	}
 	100% {
 		background-position: right center;
-		opacity: 0;
+		
 	}
 }
 @keyframes smoke {
 	0% {
 		background-position: left center;
-		opacity: 0;
 	}
-	1% {
-		opacity: 1;
-	}
-	99% {
-		opacity: 1;
-	}
+	
 	100% {
 		background-position: right center;
-		opacity: 0;
 	}
 }
 /* Efek sprite animasi fire */
