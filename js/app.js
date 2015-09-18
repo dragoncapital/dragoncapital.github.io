@@ -217,6 +217,7 @@ jQdcc(document).ready(function($){
 		$(window).on('resize', function(e){
 			h = $(window).height();
 			w = $(window).width();
+			$('body').hide();
 			resizeRes();
 			refreshPage(state);
 			dccLobby.refresh();
@@ -225,7 +226,7 @@ jQdcc(document).ready(function($){
 			dccIllustrator.refresh();
 			dccRooftop.refresh();
 			dccOutspace.refresh();
-			$('body').hide();
+			
 $('body').get(0).offsetHeight; 
 $('body').show();
 });
