@@ -1505,12 +1505,12 @@ a.btn-begin {
 .rocket-holder.active .fire-animation {
 	-webkit-animation:2s steps(9, end) 0s normal none infinite running mascot;
 	animation:2s steps(9, end) 0s normal none infinite running mascot;
-	-webkit-transform:translate3d(0,40%,0) scale(1);
 	-webkit-transition:transform ease 3s;
 	-webkit-transition-delay:3s;
-	transform:translate3d(0,40%,0) scale(1);
+	-webkit-transform:translate3d(0,40%,0) scale(1);
 	transition:transform ease 3s;
 	transition-delay:3s;
+	transform:translate3d(0,40%,0) scale(1);
 }
 .rocket-holder.active .smoke-animation {
 	display: block;

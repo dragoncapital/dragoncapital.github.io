@@ -229,8 +229,12 @@ jQdcc(document).ready(function($){
 			initLobby();
 			var $scrolled = ($('#dcc-home').height()-$(window).height());
 			$('#header').show();
+			var timeout = 4000;
+			if(w < 600){
+				timeout = 1000;
+			}
 			setTimeout(function(e){
-				$('#dcc-home').css({'transformOrigin':'50% 100% 0', 'transform':'translateY(-'+$scrolled+'px)', 'transition-duration':'4s'});
+				$('#dcc-home').css({'transformOrigin':'50% 100% 0', 'transform':'translateY(-'+$scrolled+'px)', 'transition-duration':timeout+'ms'});
 				setTimeout(function(e){
 					$('#dcc-home').css({'transform':'translateY(-'+$scrolled+'px) scale(2)', 'opacity':'0', 'transition':'transform 1.5s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 2s cubic-bezier(0.465, 0.183, 0.153, 0.946) 1.5s'});
 					setTimeout(function(e){
@@ -247,7 +251,7 @@ jQdcc(document).ready(function($){
 						});
 						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 1, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
 					},3000);
-				},4000);
+				},timeout);
 },600);
 });
 }
