@@ -120,7 +120,7 @@ jQdcc(document).ready(function($){
 		}
 	}
 	function initMenu(){
-		$('.top-nav a').on('touchend mouseup', function(e){
+		$('.top-nav a').on('click', function(e){
 			e.preventDefault();
 			var ps = $(this).data('page');
 			if(!$('.dcc-nav').hasClass('disabled')){
