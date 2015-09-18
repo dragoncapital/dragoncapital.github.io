@@ -1534,6 +1534,7 @@ a.btn-begin {
 	left: 49%;
 	margin-left: -50px;
 	z-index: 15;
+	cursor:pointer;
 }
 .btn-launch.rippling:before {
 	width:100%;
