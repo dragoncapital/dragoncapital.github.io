@@ -215,19 +215,20 @@ jQdcc(document).ready(function($){
 		initEsc();
 
 		$(window).on('resize', function(e){
-
-			
 			h = $(window).height();
 			w = $(window).width();
 			resizeRes();
 			refreshPage(state);
 			dccLobby.refresh();
-		dccDeveloper.refresh();
-		dccCreative.refresh();
-		dccIllustrator.refresh();
-		dccRooftop.refresh();
-		dccOutspace.refresh();
-		});
+			dccDeveloper.refresh();
+			dccCreative.refresh();
+			dccIllustrator.refresh();
+			dccRooftop.refresh();
+			dccOutspace.refresh();
+			$('body').hide();
+$('body').get(0).offsetHeight; 
+$('body').show();
+});
 	}
 	
 	function start(){
@@ -724,7 +725,7 @@ function initReveal(){
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav();
 
-		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
+		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('clickx', function(e){
 			e.preventDefault();
 			$('body').find('.reveal-bg').remove();
 			$('body').find('.reveal-modal').remove();
