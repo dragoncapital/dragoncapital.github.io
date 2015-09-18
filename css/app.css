@@ -2154,6 +2154,7 @@ a.btn-begin {
 		height:100%;
 		position: relative;
 		padding:0 15px;
+		overflow-y:scroll;
 	}
 	.team-reveal-modal:after { clear:both; display: table; content:"";}
 
