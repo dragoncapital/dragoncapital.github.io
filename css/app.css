@@ -2115,6 +2115,7 @@ a.btn-begin {
 		text-indent: 0;
 		background:none;
 		top:5px; right:5px; box-shadow:none;
+		-webkit-transform:none;
 		transform:none;
 		width:auto;
 		font-size:14px;
