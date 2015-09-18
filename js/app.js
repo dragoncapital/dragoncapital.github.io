@@ -99,7 +99,8 @@ jQdcc(document).ready(function($){
 		$('.smoke-animation').css({'width':(nWx*0.3)+'px', 'height':(h*0.29296875)+'px', 'background-size':((nWx*0.3)*10)+'px '+(h*0.29296875)+'px'});
 		$('.fire-animation').css({'width':(nWx*0.025)+'px', 'height':(h*0.29296875)+'px', 'background-size':((nWx*0.025)*10)+'px '+(h*0.29296875)+'px'});
 		var rocket = $('.rocket-holder').width();
-		$('.rocket-smoke').css({'margin-left':'-'+((nWx*0.3)/2)+'px'})
+		$('.rocket-smoke').css({'margin-left':'-'+((nWx*0.3)/2)+'px'});
+		$('.rocket-fire').css({'margin-left':'-'+((nWx*0.025)/2)+'px'})
 		$('.btn-launch').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');
