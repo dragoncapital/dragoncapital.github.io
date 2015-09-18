@@ -724,7 +724,7 @@ function initReveal(){
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav();
 
-		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('mouseup touchend', function(e){
+		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
 			e.preventDefault();
 			$('body').find('.reveal-bg').remove();
 			$('body').find('.reveal-modal').remove();
