@@ -121,7 +121,7 @@ jQdcc(document).ready(function($){
 		}
 	}
 	function initMenu(){
-		$('.top-nav a').on('mouseup touchend', function(e){
+		$('.top-nav a').on('click', function(e){
 			e.preventDefault();
 			var ps = $(this).data('page');
 			if(!$('.dcc-nav').hasClass('disabled')){
@@ -699,7 +699,7 @@ function initPopup(){
 			$('.dragon').removeClass('active');
 			enableNav();			
 		}
-		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('mouseup touchend', function(e){
+		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('mousedown touchstart', function(e){
 			e.preventDefault();
 			$('body').find('.team-reveal-bg').remove();
 			$('body').find('.team-reveal-modal').remove();

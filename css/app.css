@@ -2018,6 +2018,7 @@ a.btn-begin {
 		top:auto;
 		bottom:0;
 		left: 25%;
+		-webkit-transition: all ease 2s;
 		transition: all ease 2s;
 	}
 	.dcc-space .planet.planet-creative {
@@ -2029,7 +2030,9 @@ a.btn-begin {
 		left: 25%;
 		-webkit-animation: none;
 		animation: none;
+		-webkit-transition: all ease 2s;
 		transition: all ease 2s;
+		-webkit-transform: translateX(300%);
 		transform: translateX(300%);
 	}
 	.dcc-space .planet.planet-illustrator {
@@ -2041,7 +2044,9 @@ a.btn-begin {
 		right: 33%;
 		-webkit-animation: none;
 		animation: none;
+		-webkit-transition: all ease 2s;
 		transition: all ease 2s;
+		-webkit-transform: translateX(300%);
 		transform: translateX(300%);
 	}
 	.planet-content {
