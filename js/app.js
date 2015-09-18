@@ -678,7 +678,7 @@ function loadHQ(){
 }
 
 function initPopup(){
-	$('.dragon a').on('click touchstart', function(e){
+	$('.dragon a').on('click', function(e){
 		e.preventDefault();		
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
@@ -689,7 +689,7 @@ function initPopup(){
 			$('.dragon').removeClass('active');
 			enableNav();			
 		}
-		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click touchstart', function(e){
+		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click', function(e){
 			e.preventDefault();
 			$('body').find('.team-reveal-bg').remove();
 			$('body').find('.team-reveal-modal').remove();
@@ -698,7 +698,7 @@ function initPopup(){
 		});
 	})
 
-	$('.dragon-bg').on('click touchend', function(e){
+	$('.dragon-bg').on('click', function(e){
 		e.preventDefault();		
 		$('.dragon').removeClass('active');
 		enableNav();
@@ -707,14 +707,14 @@ function initPopup(){
 
 }
 function initReveal(){
-	$('.dragon-hiring > a').on('click touchend', function(e){
+	$('.dragon-hiring > a').on('click', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
 		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav();
 
-		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click touchend', function(e){
+		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
 			e.preventDefault();
 			$('body').find('.reveal-bg').remove();
 			$('body').find('.reveal-modal').remove();
