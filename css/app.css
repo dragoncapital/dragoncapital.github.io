@@ -923,7 +923,7 @@ body.disable-nav .draggie.drag-next { -webkit-transform:translateX(100px);transf
 	-webkit-animation: ripple 3s infinite;
 	animation: ripple 3s infinite linear;
 }
-.rippling:after {
+/*.rippling:after {
 	display: block;
 	content: "";
 	width: 80px;
@@ -940,7 +940,7 @@ body.disable-nav .draggie.drag-next { -webkit-transform:translateX(100px);transf
 	border-radius: 1000px;
 	-webkit-animation: inner-ripple 3s 1.5s infinite linear;
 	animation: inner-ripple 3s 1.5s infinite linear;
-}
+}*/
 
 /* Homepage */
 #dcc-home {
@@ -1802,7 +1802,7 @@ a.btn-begin {
 	a.btn-begin span {
 		width:100px; height:100px;
 	}
-	.rippling:before, .rippling:after {
+	.rippling:before {
 		width:100px; height:100px; margin-top:-50px; margin-left:-50px;
 	}
 }

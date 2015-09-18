@@ -7,7 +7,13 @@
 	<title>Dragon Capital Center</title>
 	<meta name="description" content="">
 	<meta name="keywords" content="">
-	<script type="text/javascript" src="js/modernizr.js"></script>	
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="application/javascript">
+		window.addEventListener('load', function() {
+			new FastClick(document.body);
+		}, false);
+	</script>
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontface.css">
 	<link rel="stylesheet" type="text/css" href="css/cframe.min.css">
@@ -433,6 +439,9 @@
 						<div class="draggable draggable-normal">
 							<div class="drag-background"><img data-src="img/rooftop.jpg" data-hq="img/rooftop-hq.jpg" alt="Rooftop" class="bg-lq"></div>
 							<div class="drag-content">
+								<div class="rooftop-content">
+									<p><span class="launcher-content"></span></p>
+								</div>
 								<div class="rocket-holder">
 									<div class="rocket">
 										<div class="rocket-body"><img src="img/rocket.png"></div>
