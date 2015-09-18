@@ -1878,7 +1878,17 @@ a.btn-begin {
 
 @media only screen and (max-width:768px) and (orientation:portrait){
 	#lobby-content {
-		width:640px; margin-left:-320px; left:50%;
+		width:600px;
+		left:50%; margin-left:-300px;
+		top:15%;
+	}
+	#dcc-lobby p {
+		font-size:22px;
+		line-height: 1.6;
+		margin:0 0 25px;
+	}
+	#dcc-lobby h2 {
+		font-size:48px;
 	}
 }
 
