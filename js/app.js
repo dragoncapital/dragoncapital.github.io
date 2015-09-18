@@ -185,7 +185,7 @@ jQdcc(document).ready(function($){
 			}		
 		})
         
-        $('.btn-watch-us').on('click touchstart', function(){
+        $('.btn-watch-us').on('click touchstart', function(e){
             $('.wp-container').html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xgkNe6R4Un0" frameborder="0" allowfullscreen></iframe><a class="wp-btnclose"></a>');
             $('.watchus-popup').removeClass('deactive');
             $('.watchus-popup').addClass('active');
