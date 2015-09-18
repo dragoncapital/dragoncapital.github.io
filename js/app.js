@@ -219,17 +219,9 @@ jQdcc(document).ready(function($){
 			w = $(window).width();
 			$('body').hide();
 			resizeRes();
-			refreshPage(state);
-			dccLobby.refresh();
-			dccDeveloper.refresh();
-			dccCreative.refresh();
-			dccIllustrator.refresh();
-			dccRooftop.refresh();
-			dccOutspace.refresh();
-			
-$('body').get(0).offsetHeight; 
-$('body').show();
-});
+			$('body').get(0).offsetHeight; 
+			$('body').show();
+		});
 	}
 	
 	function start(){
