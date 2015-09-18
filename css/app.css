@@ -1502,12 +1502,13 @@ a.btn-begin {
 	transform:translate3d(0,40%,0) scale(1);
 }
 .rocket-holder.active .smoke-animation {	
+	
+	-webkit-animation:smoke 1s steps(9) infinite linear;
+	animation:smoke 1s steps(9) infinite linear;
 	-webkit-animation-iteration-count:1;
 	animation-iteration-count:1;
 	-webkit-animation-delay:1s;
-	animation-delay:1s;
-	-webkit-animation:smoke 1s steps(9) infinite linear;
-	animation:smoke 1s steps(9) infinite linear;
+	animation-delay:1s;	
 }
 .btn-launch {
 	width: 0.51%;
