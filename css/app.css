@@ -322,6 +322,7 @@
 body {
 	font-family: "Museo300";
 	overflow-y:hidden;
+	background:#000;
 }
 body.resizeres:after {
 	display: block; position: fixed; z-index: 1000; background:#ebebeb url(../img/preload.gif) no-repeat center; top:0; left:0;right:0;bottom:0; content:"";
