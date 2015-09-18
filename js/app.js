@@ -157,14 +157,14 @@ jQdcc(document).ready(function($){
 
 		initImagesLoaded();
 
-		$('.logo a').on('click touchend', function(e){
+		$('.logo a').on('click mouseup touchend', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && !$('html').hasClass('touch')){
 				gotoPage(1);
 			}
 		})
 
-		$('.menu-button').on('click', function(e){
+		$('.menu-button').on('mouseup touchend', function(e){
 			e.preventDefault();
 			if(!$('#header').hasClass('disabled')){
 				if(!$('.mainmenu').hasClass('active')){
@@ -179,26 +179,26 @@ jQdcc(document).ready(function($){
 
 		$('.menu-items').perfectScrollbar();
 
-		$('.dcc-nav .up').on('click', function(e){
+		$('.dcc-nav .up').on('mouseup touchend', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && state<6){
 				nextPage();
 			}
 		})
-		$('.dcc-nav .down').on('click', function(e){
+		$('.dcc-nav .down').on('mouseup touchend', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && state>1){
 				prevPage();
 			}		
 		})
 
-		$('.btn-watch-us').on('click touchend', function(e){
+		$('.btn-watch-us').on('mouseup touchend', function(e){
 			e.preventDefault();
 			$('.wp-container').html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xgkNe6R4Un0" frameborder="0" allowfullscreen></iframe><a href="#" class="wp-btnclose"></a>');
 			$('.watchus-popup').removeClass('deactive');
 			$('.watchus-popup').addClass('active');
 		});
-		$('.watchus-popup, .wp-btnclose').on('click touchend', function(e){
+		$('.watchus-popup, .wp-btnclose').on('mouseup touchend', function(e){
 			e.preventDefault();
 			$('.wp-container').html('');
 			$('.watchus-popup').removeClass('active');
@@ -221,7 +221,7 @@ jQdcc(document).ready(function($){
 		});
 	}
 	function start(){
-		$('.start-now').on('click touchend', function(e){
+		$('.start-now').on('mouseup touchend', function(e){
 			e.preventDefault();
 			state=1;
 			var initScroll = ((h*(6-state))+(50*(5-state))+(2*h))*-1;
@@ -259,7 +259,7 @@ jQdcc(document).ready(function($){
 function initLobby(){
 	var lobbyStartX = (($('.draggable-normal').width() - w)/2)*-1;
 	dccLobby = new IScroll('#dcc-lobby', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A)$/ }, startX:lobbyStartX});
-	$('.btn-meet-us').on('click touchend', function(e){
+	$('.btn-meet-us').on('mouseup touchend', function(e){
 		e.preventDefault();
 		if(!$('.dcc-nav').hasClass('disabled') && state==1){
 			gotoPage(2);
@@ -678,7 +678,7 @@ function loadHQ(){
 }
 
 function initPopup(){
-	$('.dragon a').on('click', function(e){
+	$('.dragon a').on('mouseup touchend', function(e){
 		e.preventDefault();		
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
@@ -689,7 +689,7 @@ function initPopup(){
 			$('.dragon').removeClass('active');
 			enableNav();			
 		}
-		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click', function(e){
+		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('mouseup touchend', function(e){
 			e.preventDefault();
 			$('body').find('.team-reveal-bg').remove();
 			$('body').find('.team-reveal-modal').remove();
@@ -707,14 +707,14 @@ function initPopup(){
 
 }
 function initReveal(){
-	$('.dragon-hiring > a').on('click', function(e){
+	$('.dragon-hiring > a').on('mouseup touchend', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
 		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav();
 
-		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
+		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('mouseup touchend', function(e){
 			e.preventDefault();
 			$('body').find('.reveal-bg').remove();
 			$('body').find('.reveal-modal').remove();
