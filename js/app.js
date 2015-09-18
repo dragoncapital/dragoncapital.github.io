@@ -104,12 +104,7 @@ jQdcc(document).ready(function($){
 		$('.btn-launch').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');
-		dccLobby.refresh();
-		dccDeveloper.refresh();
-		dccCreative.refresh();
-		dccIllustrator.refresh();
-		dccRooftop.refresh();
-		dccOutspace.refresh();
+		
 	}
 
 	function enableNav(){
@@ -227,6 +222,12 @@ jQdcc(document).ready(function($){
 			w = $(window).width();
 			resizeRes();
 			refreshPage(state);
+			dccLobby.refresh();
+		dccDeveloper.refresh();
+		dccCreative.refresh();
+		dccIllustrator.refresh();
+		dccRooftop.refresh();
+		dccOutspace.refresh();
 		});
 	}
 	
