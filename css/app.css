@@ -1535,7 +1535,7 @@ a.btn-begin {
 	background-size: cover;
 }
 .btn-launch img {
-	display: block;
+	opacity:0;
 }
 
 /* Outspace Section */

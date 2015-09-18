@@ -102,8 +102,8 @@ jQdcc(document).ready(function($){
 		console.log(rocket);
 		$('.rocket-smoke').css({'margin-left':'-'+((nWx*0.3)/2)+'px'});
 		$('.rocket-fire').css({'margin-left':'-'+((nWx*0.025)/2)+'px'})
-		$('.btn-launch').css({'width':(rocket*5.11)+'px', 'height':(rocket*5.1)+'px', 'margin-left':'-'+((rocket*5.1)/2)+'px'});
-		$('.btn-launch:before').css({'width':(rocket*5.1)+'px', 'height':(rocket*5.1)+'px', 'margin-left':'-'+((rocket*5.1)/2)+'px'});
+		//$('.btn-launch').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
+		$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');		
 	}
@@ -510,6 +510,7 @@ function initRooftop(){
 			nextPage();
 		}
 	});
+	$();
 	var interval;
 	var iv = 50;
 	$('.drag-nav-rooftop .draggie.drag-next').on('mousedown touchstart', function(e){
