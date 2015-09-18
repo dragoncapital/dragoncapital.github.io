@@ -678,7 +678,7 @@ function loadHQ(){
 }
 
 function initPopup(){
-	$('.dragon a').on('click touchend', function(e){
+	$('.dragon a').on('click touchstart', function(e){
 		e.preventDefault();		
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
@@ -689,7 +689,7 @@ function initPopup(){
 			$('.dragon').removeClass('active');
 			enableNav();			
 		}
-		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click touchend', function(e){
+		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click touchstart', function(e){
 			e.preventDefault();
 			$('body').find('.team-reveal-bg').remove();
 			$('body').find('.team-reveal-modal').remove();
