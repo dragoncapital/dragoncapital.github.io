@@ -224,9 +224,9 @@ jQdcc(document).ready(function($){
 			refreshPage(state);
 		});
 	}
-	$('body').addClass('resizeres');
+	
 	window.addEventListener("resize", function() {
-		
+		$('body').addClass('resizeres');
 		setTimeout(function(e){
 			$('body').removeClass('resizeres');
 		},1000);
