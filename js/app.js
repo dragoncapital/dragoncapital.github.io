@@ -216,17 +216,19 @@ jQdcc(document).ready(function($){
 		initEsc();
 
 		$(window).on('resize', function(e){
-			$('body').addClass('resizeres');
+
 			
 			h = $(window).height();
 			w = $(window).width();
 			resizeRes();
 			refreshPage(state);
-			setTimeout(function(e){
-				$('body').removeClass('resizeres');
-			},1000);
 		});
 	}
+	$('body').addClass('resizeres');
+	window.addEventListener("resize", function() {
+		$('body').addClass('resizeres');
+		
+	}, false);
 	function start(){
 		$('.start-now').on('mouseup touchend', function(e){
 			e.preventDefault();
