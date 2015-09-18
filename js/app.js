@@ -198,7 +198,7 @@ jQdcc(document).ready(function($){
 			$('.watchus-popup').removeClass('deactive');
 			$('.watchus-popup').addClass('active');
 		});
-		$('.watchus-popup, .wp-btnclose').on('click touchend', function(){
+		$('.watchus-popup, .wp-btnclose').on('click touchend', function(e){
 			e.preventDefault();
 			$('.wp-container').html('');
 			$('.watchus-popup').removeClass('active');
