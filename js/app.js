@@ -86,6 +86,7 @@ jQdcc(document).ready(function($){
 		checkState();		
 	}
 	function resizeRes(){
+		$('body').addClass('resizeres');
 		var nW = Math.round((2400*h)/1024);
 		var nWx = Math.round((4000*h)/1024);
 		var nWs = Math.round((2400*h*2)/2048);
@@ -104,6 +105,9 @@ jQdcc(document).ready(function($){
 		$('.btn-launch').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');
+		setTimeout(function(e){
+			$('body').removeClass('resizeres');
+		},1000)
 	}
 	function enableNav(){
 		$('body').removeClass('disable-nav');
@@ -249,7 +253,7 @@ jQdcc(document).ready(function($){
 
 							$('.lobby-button-container').addClass('active');
 						});
-						$('.paragraph').typed({	strings:["Hi,^500 we just came back to mother earth to spread what we have seen back in the future. ^700 What we are doing might not be something you have seen before. ^700 <br/>We know what you have thought.<br/> ^1000 No, ^200 not that one, ^1000 and not that one either. ^900 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 2, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
+						$('.paragraph').typed({	strings:["Hi, ^500 we just came back to mother earth to spread what we have seen back in the future. ^700 What we are doing might not be something you have seen before. ^700 <br/>We know what you have thought.<br/> ^1000 No, ^200 not that one, ^1000 and not that one either. ^900 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 2, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
 					},3000);
 				},timeout);
 },100);

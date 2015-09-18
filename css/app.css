@@ -323,6 +323,9 @@ body {
 	font-family: "Museo300";
 	overflow-y:hidden;
 }
+body.resizeres:after {
+	display: block; position: fixed; z-index: 1000; background:#ebebeb url(../img/preload.gif) no-repeat center; top:0; left:0;right:0;bottom:0; content:"";
+}
 h1,
 h2,
 h3,
@@ -2177,7 +2180,7 @@ a.btn-begin {
 		left:50%;
 	}
 }
-@media only screen and (max-height:640px){
+@media only screen and (max-height:640px) and (max-width:1024){
 	#dcc-lobby h2 {
 		color:#fff;
 		font-size:22px;
