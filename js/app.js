@@ -103,8 +103,7 @@ jQdcc(document).ready(function($){
 		$('.rocket-fire').css({'margin-left':'-'+((nWx*0.025)/2)+'px'})
 		$('.btn-launch').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 		$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
-		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');
-		
+		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');		
 	}
 
 	function enableNav(){
