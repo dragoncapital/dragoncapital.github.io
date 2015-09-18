@@ -249,7 +249,7 @@ jQdcc(document).ready(function($){
 
 							$('.lobby-button-container').addClass('active');
 						});
-						$('.paragraph').typed({	strings:["Hi,^1000 FYI we just came back to mother earth to spread the news about what we have seen back in the future.^1000 So most probably what we are doing might not be something you have seen before.^1000 <br/>We know what you have thought.<br/> ^2000 No,^300 not that one,^1000 and not that one either.^1000 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 1, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
+						$('.paragraph').typed({	strings:["Hi,^500 we just came back to mother earth to spread what we have seen back in the future. ^700 What we are doing might not be something you have seen before. ^700 <br/>We know what you have thought.<br/> ^1000 No, ^200 not that one, ^1000 and not that one either. ^900 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 2, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
 					},3000);
 				},timeout);
 },100);
