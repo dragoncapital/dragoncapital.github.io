@@ -724,9 +724,9 @@ function initReveal(){
 }
 
 function injectSrc(el){
-	if(h <= 400){
+	if(h <= 400 && w < 1024){
 			el.attr('src', el.data('mobile')); //400
-		}else if(h <= 600 && h > 400){
+		}else if(h <= 600 && h > 400 && w < 1024){
 		el.attr('src', el.data('tablet')); //600
 	}else if(h <= 800 && h > 600){
 			el.attr('src', el.data('medium')); //800
