@@ -230,7 +230,7 @@ jQdcc(document).ready(function($){
 			var $scrolled = ($('#dcc-home').height()-$(window).height());
 			$('#header').show();
 			var timeout = 4000;
-			if(w < 600){
+			if(w < 769){
 				timeout = 1000;
 			}
 			setTimeout(function(e){
