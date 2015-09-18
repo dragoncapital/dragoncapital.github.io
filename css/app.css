@@ -1496,8 +1496,6 @@ a.btn-begin {
 	height:300px;
 	background-size:12000px 300px;
 	background:url(../img/rocket-smoke.png) no-repeat left top;
-	display: none;
-	opacity: 0;
 }
 .rocket-holder.active .rocket {
 	-webkit-animation:shake2 .1s infinite;
@@ -1517,14 +1515,13 @@ a.btn-begin {
 	transition-delay:3s;
 	transform:translate3d(0,40%,0) scale(1);
 }
-.rocket-holder.active .smoke-animation {
-	display: block;
-	-webkit-animation:smoke 1s steps(9) infinite;
-	animation:smoke 1s steps(9) infinite;
+.rocket-holder.active .smoke-animation {	
 	-webkit-animation-iteration-count:1;
 	animation-iteration-count:1;
 	-webkit-animation-delay:1s;
 	animation-delay:1s;
+	-webkit-animation:smoke 1s steps(9) infinite linear;
+	animation:smoke 1s steps(9) infinite linear;
 }
 .btn-launch {
 	width: 0.51%;
