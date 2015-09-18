@@ -949,6 +949,7 @@ body.disable-nav .draggie.drag-next { -webkit-transform:translateX(100px);transf
 }
 .dragon-building img {
 	display: block;
+	width:100%;
 }
 .dcc-building {
 	position: relative;
