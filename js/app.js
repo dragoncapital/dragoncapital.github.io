@@ -226,8 +226,11 @@ jQdcc(document).ready(function($){
 	}
 	$('body').addClass('resizeres');
 	window.addEventListener("resize", function() {
-		$('body').addClass('resizeres');
 		
+		setTimeout(function(e){
+			$('body').removeClass('resizeres');
+		},1000);
+
 	}, false);
 	function start(){
 		$('.start-now').on('mouseup touchend', function(e){
