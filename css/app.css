@@ -1181,7 +1181,7 @@ a.btn-begin {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.5);
 	width: 100%;
 	height: 100%;
 	z-index: 98;
@@ -1194,29 +1194,32 @@ a.btn-begin {
 	display: none;
 }
 .wp-wrapper {
-	width: 80%;
+	width: 50%;
 	height: 100%;
-	margin: 50px auto;
+	margin:100px auto 0;
+	position: relative;
 }
 .wp-container {
-	width: 80%;
-	height: 80%;
-	padding: 5px;
+	width: 100%;
+	height: auto;
+	padding: 2px;
 	position: absolute;
 	background-color: #fff;
+	box-shadow:-2px 2px 15px #000;
 }
 .watchus-popup .wp-wrapper .wp-container .wp-btnclose {
-	top: -15px;
-	right: -15px;
+	top: -13px;
+	right: -13px;
 	position: absolute;
 	width: 26px;
 	height: 26px;
 	background: url(../img/dragon-button.png) no-repeat center;
 	background-size: cover;
-	background-color: #fff;
 	border-radius: 1000px;
 	-webkit-transform: rotate(225deg);
 	transform: rotate(225deg);
+	-webkit-box-shadow:0 0 3px #000;
+	box-shadow:0 0 3px #000;
 	cursor: pointer;
 }
 
@@ -1509,8 +1512,8 @@ a.btn-begin {
 	animation-delay:1s;
 }
 .btn-launch {
-	width: 0.51%;
-	height: 0.159375%;
+	width: 51%;
+	height: 15.9375%;
 	position: absolute;
 	top: 26%;
 	left: 49%;
@@ -1697,7 +1700,7 @@ a.btn-begin {
 	content: "";
 }
 .reveal-modal {
-	position: absolute;
+	position: fixed;
 	z-index: 45;
 	top: 50%;
 	left: 50%;
@@ -1750,7 +1753,7 @@ a.btn-begin {
 	border-radius: 1000px;
 	top: -15px;
 	right: -15px;
-	z-index: 52;
+	z-index: 999;
 	color: #000;
 	text-indent: -9999px;
 	-webkit-transform: rotate(45deg);
@@ -1878,6 +1881,9 @@ a.btn-begin {
 	.top-nav { position: relative; top:auto; left:0; margin-top:0;}
 	.dcc-socials { position: relative; padding:25px 0;}
 	.dcc-zeppelin { display: none;}
+	.wp-wrapper { 
+		width:80%;
+	}
 }
 
 @media only screen and (max-width:768px) and (orientation:portrait){
@@ -1908,6 +1914,9 @@ a.btn-begin {
 
 /* Mobile Down and Small Screen Media Queries */
 @media only screen and (max-width: 640px) {
+	.wp-wrapper { 
+		width:90%;
+	}
 	.dcc-plank {
 		width:240px;
 		margin-left:-120px;
@@ -2121,6 +2130,7 @@ a.btn-begin {
 		width:auto;
 		font-size:14px;
 		font-weight: bold;
+		cursor:pointer;
 	}
 	.reveal-modal .close-reveal span { display: inline-block}
 	.reveal-modal .hiring-content { padding:0; height:85%;}

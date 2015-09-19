@@ -98,12 +98,10 @@ jQdcc(document).ready(function($){
 		$('.mascot-cat .mascot').css({'width':(nWx*0.05)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.05)*25)+'px '+(h*0.21484375)+'px'});
 		$('.smoke-animation').css({'width':(nWx*0.3)+'px', 'height':(h*0.29296875)+'px', 'background-size':((nWx*0.3)*10)+'px '+(h*0.29296875)+'px'});
 		$('.fire-animation').css({'width':(nWx*0.025)+'px', 'height':(h*0.29296875)+'px', 'background-size':((nWx*0.025)*10)+'px '+(h*0.29296875)+'px'});
-		var rocket = $('.rocket-holder').width();
-		console.log(rocket);
 		$('.rocket-smoke').css({'margin-left':'-'+((nWx*0.3)/2)+'px'});
 		$('.rocket-fire').css({'margin-left':'-'+((nWx*0.025)/2)+'px'})
-		//$('.btn-launch').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
-		$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
+		$('.btn-launch').css({'margin-left':'-'+($('.btn-launch').width()/2)+'px'});
+		//$('.btn-launch:before').css({'width':(rocket*0.51)+'px', 'height':(rocket*0.51)+'px', 'margin-left':'-'+((rocket*0.51)/2)+'px'});
 
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');		
 	}
@@ -123,7 +121,7 @@ jQdcc(document).ready(function($){
 		}
 	}
 	function initMenu(){
-		$('.top-nav a').on('click', function(e){
+		$('.top-nav a').on('mouseup touchend', function(e){
 			e.preventDefault();
 			var ps = $(this).data('page');
 			if(!$('.dcc-nav').hasClass('disabled')){
@@ -197,7 +195,7 @@ jQdcc(document).ready(function($){
 
 		$('.btn-watch-us').on('mouseup touchend', function(e){
 			e.preventDefault();
-			$('.wp-container').html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xgkNe6R4Un0" frameborder="0" allowfullscreen></iframe><a href="#" class="wp-btnclose"></a>');
+			$('.wp-container').html('<div class="flex-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZW6Fs-YaW9Y" frameborder="0" allowfullscreen></iframe></div><a href="#" class="wp-btnclose"></a>');
 			$('.watchus-popup').removeClass('deactive');
 			$('.watchus-popup').addClass('active');
 		});
@@ -222,16 +220,16 @@ jQdcc(document).ready(function($){
 			$('body').hide();
 			resizeRes();
 			refreshPage(state);
-			dccLobby.refresh();
-			dccDeveloper.refresh();
-			dccCreative.refresh();
-			dccIllustrator.refresh();
-			dccRooftop.refresh();
-			dccOutspace.refresh();
+			// dccLobby.refresh();
+			// dccDeveloper.refresh();
+			// dccCreative.refresh();
+			// dccIllustrator.refresh();
+			// dccRooftop.refresh();
+			// dccOutspace.refresh();
 			
-$('body').get(0).offsetHeight; 
-$('body').show();
-});
+			$('body').get(0).offsetHeight; 
+			$('body').show();
+		});
 	}
 	
 	function start(){
@@ -504,7 +502,7 @@ function initRooftop(){
 		$('.top-nav li.f5 a span.enabled').css('width','100%');
 		$('#preload-rooftop').fadeOut(250);
 	});
-	$('.btn-launch').on('click touchend', function(e){
+	$('.btn-launch').on('mouseup touchend', function(e){
 		e.preventDefault();
 		if(!$('.dcc-nav').hasClass('disabled') && state<6){
 			nextPage();
@@ -727,9 +725,9 @@ function initReveal(){
 		var $this_id = $(this).data('dragon-id');
 		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
-		disableNav();
+		disableNav(); 
 
-		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('clickx', function(e){
+		$('body').on('touchend mouseup', '.reveal-modal a.close-reveal, .reveal-bg', function(e){
 			e.preventDefault();
 			$('body').find('.reveal-bg').remove();
 			$('body').find('.reveal-modal').remove();
@@ -752,7 +750,6 @@ function injectSrc(el){
 
 	function initCentered(){
 		$('.centered-content').each(function(i,e){
-			//$(e).css({'margin-top':($(this).height()/2)*-1+'px'});
 		});
 	}
 	function initEsc(){
