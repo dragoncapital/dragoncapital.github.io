@@ -1071,8 +1071,8 @@ body.disable-nav .draggie.drag-next { -webkit-transform:translateX(100px);transf
 	transform-origin:50% 0;
 	-webkit-transform:scale(.75) rotate3d(1, 0, 0, 15deg);
 	transform:scale(.75) rotate3d(1, 0, 0, 15deg);
-	-webkit-animation:mascot 4s steps(3) infinite;
-	animation:mascot 4s steps(3) infinite;
+	-webkit-animation:mascot 6s steps(4) infinite;
+	animation:mascot 6s steps(4) infinite;
 	display: block;
 	-webkit-box-shadow: 1px 1px 2px #666;
 	box-shadow: 1px 1px 2px #666;
