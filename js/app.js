@@ -233,6 +233,7 @@ jQdcc(document).ready(function($){
 	function start(){
 		$('.start-now').on('click', function(e){
 			e.preventDefault();
+			alert("CLICKED");
 			state=1;
 			var initScroll = ((h*(6-state))+(50*(5-state))+(2*h))*-1;
 			$('.dcc-container').css({'transform':'translateY('+initScroll+'px)'});
