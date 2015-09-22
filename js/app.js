@@ -32,7 +32,7 @@ jQdcc(document).ready(function($){
 				$('.rocket-holder').removeClass('active');
 				$('.rocket-holder').css({'transform':'translate3d(0,0, 0) scale(1)'});
 				$('.dcc-nav').removeClass('disabled');
-			},10000);
+			},12000);
 		}else{
 			setTimeout(function(e){
 				$('.dcc-nav').removeClass('disabled');
@@ -93,14 +93,14 @@ jQdcc(document).ready(function($){
 		$('.draggable-wide, .draggable-wide .drag-background, .drag-background img').width(nWx).height(h);
 		$('.dcc-draggable').height(h);
 		$('.sky-separator').css({'height':(h*2)+'px','background-size':nWs+'px '+(h*2)+'px'});
-		$('.mascot-bear .mascot').css({'width':(nWx*0.04375)+'px','height':(h*0.234375)+'px','background-size':((nWx*0.04375)*40)+'px '+(h*0.234375)+'px'});
-		$('.mascot-bebek .mascot').css({'width':(nWx*0.0325)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.0325)*25)+'px '+(h*0.21484375)+'px'});
-		$('.mascot-cat .mascot').css({'width':(nWx*0.05)+'px','height':(h*0.21484375)+'px','background-size':((nWx*0.05)*25)+'px '+(h*0.21484375)+'px'});
-		$('.smoke-animation').css({'width':(nWx*0.3)+'px', 'height':(h*0.29296875)+'px', 'background-size':((nWx*0.3)*10)+'px '+(h*0.29296875)+'px'});
-		$('.fire-animation').css({'width':(nWx*0.025)+'px', 'height':(h*0.29296875)+'px', 'background-size':((nWx*0.025)*10)+'px '+(h*0.29296875)+'px'});
-		$('.rocket-smoke').css({'margin-left':'-'+((nWx*0.3)/2)+'px'});
-		$('.rocket-fire').css({'margin-left':'-'+((nWx*0.025)/2)+'px'})
-		$('.btn-launch').css({'margin-left':'-'+($('.btn-launch').width()/2)+'px'});
+		$('.mascot-bear .mascot').css({'width':Math.round(nWx*0.04375)+'px','height':Math.round(h*0.234375)+'px','background-size':(Math.round(nWx*0.04375)*40)+'px '+Math.round(h*0.234375)+'px'});
+		$('.mascot-bebek .mascot').css({'width':Math.round(nWx*0.0325)+'px','height':Math.round(h*0.21484375)+'px','background-size':(Math.round(nWx*0.0325)*25)+'px '+Math.round(h*0.21484375)+'px'});
+		$('.mascot-cat .mascot').css({'width':Math.round(nWx*0.05)+'px','height':Math.round(h*0.21484375)+'px','background-size':(Math.round(nWx*0.05)*25)+'px '+Math.round(h*0.21484375)+'px'});
+		$('.smoke-animation').css({'width':Math.round(nWx*0.3)+'px', 'height':Math.round(h*0.29296875)+'px', 'background-size':(Math.round(nWx*0.3)*10)+'px '+Math.round(h*0.29296875)+'px'});
+		$('.fire-animation').css({'width':Math.round(nWx*0.025)+'px', 'height':Math.round(h*0.29296875)+'px', 'background-size':(Math.round(nWx*0.025)*10)+'px '+Math.round(h*0.29296875)+'px'});
+		$('.rocket-smoke').css({'margin-left':'-'+(Math.round(nWx*0.3)/2)+'px'});
+		$('.rocket-fire').css({'margin-left':'-'+(Math.round(nWx*0.025)/2)+'px'})
+		$('.btn-launch').css({'margin-left':'-'+Math.round($('.btn-launch').width()/1.875)+'px'});
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');		
 	}
 
@@ -218,12 +218,6 @@ jQdcc(document).ready(function($){
 			$('body').hide();
 			resizeRes();
 			refreshPage(state);
-			// dccLobby.refresh();
-			// dccDeveloper.refresh();
-			// dccCreative.refresh();
-			// dccIllustrator.refresh();
-			// dccRooftop.refresh();
-			// dccOutspace.refresh();
 			
 			$('body').get(0).offsetHeight; 
 			$('body').show();
@@ -563,7 +557,6 @@ function initOutspace(){
 				nextSlide = '';
 			}
 		}
-		console.log(prevSlide);
 	});
 	$('.drag-nav-outspace-mobile .draggie.drag-prev').on('click', function(e){
 		e.preventDefault();

@@ -1467,8 +1467,8 @@ a.btn-begin {
 	height:300px;
 	background-size:1000px 300px;
 	background:url(../img/rocket-fire.png) no-repeat left top;
-	-webkit-transform:translate3d(0,-30%,0) scale(0);
-	transform:translate3d(0,-30%,0) scale(0);
+	-webkit-transform:translate3d(0,-30%,0);
+	transform:translate3d(0,-30%,0);
 }
 .rocket-smoke {	
 	position: absolute;
@@ -1495,19 +1495,21 @@ a.btn-begin {
 	animation:shake2 .1s infinite;
 }
 .rocket-holder.active .fire-animation {
-	-webkit-animation:mascot 2s steps(9) infinite;
-	animation:mascot 2s steps(9) infinite;
+	-webkit-transform:translate3d(0,40%,0);
+	transform:translate3d(0,40%,0);
 	-webkit-transition:transform ease 3s;
-	-webkit-transition-delay:3s;
-	-webkit-transform:translate3d(0,40%,0) scale(1);
+	-webkit-transition-delay:3.5s;
+	
 	transition:transform ease 3s;
-	transition-delay:3s;
-	transform:translate3d(0,40%,0) scale(1);
+	transition-delay:3.5s;
+	
+	-webkit-animation:mascot .6s steps(9) infinite;
+	animation:mascot .6s steps(9) infinite;
 }
 .rocket-holder.active .smoke-animation {
 	display: block;
-	-webkit-animation:smoke 1s steps(9) infinite;
-	animation:smoke 1s steps(9) infinite;
+	-webkit-animation:smoke 1.5s steps(9) infinite;
+	animation:smoke 1.5s steps(9) infinite;
 	-webkit-animation-iteration-count:1;
 	animation-iteration-count:1;
 	-webkit-animation-delay:1s;
