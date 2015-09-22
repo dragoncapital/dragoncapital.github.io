@@ -1698,6 +1698,7 @@ a.btn-begin {
 	right: 0;
 	bottom: 0;
 	content: "";
+	cursor:pointer;
 }
 .reveal-modal {
 	position: fixed;

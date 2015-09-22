@@ -633,7 +633,7 @@ function initPopup(){
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
 			$(this).parent().addClass('active');
-			$('body').append('<div class="team-reveal-bg"></div><div class="team-reveal-modal">'+$(this).parent().find('.popup-content').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
+			$('body').append('<div class="team-reveal-bg"></div><div class="team-reveal-modal">'+$(this).parent().find('.popup-content').html()+'<a href="#" class="close-reveal">Click to close <span></span></a></div>');
 			$('.team-reveal-modal .details').perfectScrollbar();
 		}else {
 			$('.dragon').removeClass('active');
@@ -660,7 +660,7 @@ function initReveal(){
 	$('.dragon-hiring > a').on('click', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
-		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'<a class="close-reveal">Click to close <span></span></a></div>');
+		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="margin-top:-'+$(this).parent().find('.reveal').height()/2+'px">'+$(this).parent().find('.reveal').html()+'<a href="#close" class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav(); 
 
