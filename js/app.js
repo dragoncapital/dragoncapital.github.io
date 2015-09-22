@@ -509,7 +509,7 @@ function initOutspace(){
 		$('#preload-outspace span').html(curProgress+'%');
 	}).done(function(e){
 		var outspaceStartX = (($('.draggable-normal').width() - w)/2)*-1;
-		dccOutspace = new IScroll('#dcc-outspace', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }, startX:outspaceStartX, preventDefault:false});
+		// dccOutspace = new IScroll('#dcc-outspace', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }, startX:outspaceStartX, preventDefault:false});
 		$('.top-nav li.f6 a span.enabled').css('width','100%');
 		$('#preload-outspace').fadeOut(250);
 		initParallax();
@@ -664,7 +664,7 @@ function initReveal(){
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav(); 
 
-		$('body').on('click', '.reveal-modal a.close-reveal, .reveal-bg', function(e){
+		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
 			e.preventDefault();
 			$('.reveal-bg').remove();
 			$('.reveal-modal').remove();
