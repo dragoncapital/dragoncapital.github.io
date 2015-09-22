@@ -666,9 +666,8 @@ function initReveal(){
 
 		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
 			e.preventDefault();
-			alert("CCC");
-			$('.reveal-bg').remove();
-			$('.reveal-modal').remove();
+			$('body').find('.reveal-bg').remove();
+			$('body').find('.reveal-modal').remove();
 			enableNav();
 		})
 	});
