@@ -119,7 +119,7 @@ jQdcc(document).ready(function($){
 		}
 	}
 	function initMenu(){
-		$('.top-nav a').on('mouseup touchend', function(e){
+		$('.top-nav a').on('click', function(e){
 			e.preventDefault();
 			var ps = $(this).data('page');
 			if(!$('.dcc-nav').hasClass('disabled')){
@@ -156,14 +156,14 @@ jQdcc(document).ready(function($){
 
 		initImagesLoaded();
 
-		$('.logo a').on('click mouseup touchend', function(e){
+		$('.logo a').on('click', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && !$('html').hasClass('touch')){
 				gotoPage(1);
 			}
 		})
 
-		$('.menu-button').on('mouseup touchend', function(e){
+		$('.menu-button').on('click', function(e){
 			e.preventDefault();
 			if(!$('#header').hasClass('disabled')){
 				if(!$('.mainmenu').hasClass('active')){
@@ -178,26 +178,26 @@ jQdcc(document).ready(function($){
 
 		$('.menu-items').perfectScrollbar();
 
-		$('.dcc-nav .up').on('mouseup touchend', function(e){
+		$('.dcc-nav .up').on('click', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && state<6){
 				nextPage();
 			}
 		})
-		$('.dcc-nav .down').on('mouseup touchend', function(e){
+		$('.dcc-nav .down').on('click', function(e){
 			e.preventDefault();
 			if(!$('.dcc-nav').hasClass('disabled') && state>1){
 				prevPage();
 			}		
 		})
 
-		$('.btn-watch-us').on('mouseup touchend', function(e){
+		$('.btn-watch-us').on('click', function(e){
 			e.preventDefault();
 			$('.wp-container').html('<div class="flex-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZW6Fs-YaW9Y" frameborder="0" allowfullscreen></iframe></div><a href="#" class="wp-btnclose"></a>');
 			$('.watchus-popup').removeClass('deactive');
 			$('.watchus-popup').addClass('active');
 		});
-		$('.watchus-popup, .wp-btnclose').on('mouseup touchend', function(e){
+		$('.watchus-popup, .wp-btnclose').on('click', function(e){
 			e.preventDefault();
 			$('.wp-container').html('');
 			$('.watchus-popup').removeClass('active');
@@ -231,7 +231,7 @@ jQdcc(document).ready(function($){
 	}
 	
 	function start(){
-		$('.start-now').on('mouseup touchend', function(e){
+		$('.start-now').on('click', function(e){
 			e.preventDefault();
 			state=1;
 			var initScroll = ((h*(6-state))+(50*(5-state))+(2*h))*-1;
