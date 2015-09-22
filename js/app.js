@@ -666,7 +666,6 @@ function initReveal(){
 
 		$('body').on('click', '.reveal-modal a.close-reveal, .reveal-bg', function(e){
 			e.preventDefault();
-			alert('close');
 			$('.reveal-bg').remove();
 			$('.reveal-modal').remove();
 			enableNav();
