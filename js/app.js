@@ -317,7 +317,7 @@ function initDev(){
 		$('.top-nav li.f2 a span.enabled').css('width',curProgress+'%');
 		$('#preload-developer span').html(curProgress+'%');
 	}).done(function(e){
-		dccDeveloper = new IScroll('#dcc-developer', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { tagName:/^(A)$/}, preventDefault:false});
+		dccDeveloper = new IScroll('#dcc-developer', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: true, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }});
 		$('.top-nav li.f2 a span.enabled').css('width','100%');
 		$('#preload-developer').fadeOut(250);			
 	});
