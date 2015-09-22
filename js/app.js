@@ -660,7 +660,7 @@ function initReveal(){
 	$('.dragon-hiring > a').on('click', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
-		$('body').append('<div class="reveal-bg"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="top:100px">'+$(this).parent().find('.reveal').html()+'<a href="#close" class="close-reveal">Click to close <span></span></a></div>');
+		$('body').append('<div class="reveal-bg" href="#close"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="top:100px">'+$(this).parent().find('.reveal').html()+'<a href="#close" class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav(); 
 
