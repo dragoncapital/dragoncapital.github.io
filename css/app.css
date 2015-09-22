@@ -1704,7 +1704,7 @@ a.btn-begin {
 }
 .reveal-modal {
 	position: fixed;
-	z-index: 45;
+	z-index: 95;
 	top: 50%;
 	left: 50%;
 	width: 580px;
@@ -1763,6 +1763,7 @@ a.btn-begin {
 	transform: rotate(45deg);
 	-webkit-box-shadow: 0 0 3px #000;
 	box-shadow: 0 0 3px #000;
+	-webkit-cursor:pointer;
 	cursor:pointer;
 }
 .reveal-modal .close-reveal span {
