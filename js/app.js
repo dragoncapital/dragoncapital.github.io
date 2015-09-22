@@ -509,7 +509,7 @@ function initOutspace(){
 		$('#preload-outspace span').html(curProgress+'%');
 	}).done(function(e){
 		var outspaceStartX = (($('.draggable-normal').width() - w)/2)*-1;
-		dccOutspace = new IScroll('#dcc-outspace', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }, startX:outspaceStartX, prefentDefault:false});
+		// dccOutspace = new IScroll('#dcc-outspace', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }, startX:outspaceStartX, prefentDefault:false});
 		$('.top-nav li.f6 a span.enabled').css('width','100%');
 		$('#preload-outspace').fadeOut(250);
 		initParallax();
