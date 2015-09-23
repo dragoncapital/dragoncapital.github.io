@@ -1520,8 +1520,7 @@ a.btn-begin {
 	height: 15.9375%;
 	position: absolute;
 	top: 26%;
-	left: 49%;
-	margin-left: -50px;
+	left: 24.5%;
 	z-index: 33;
 	cursor:pointer;
 }
@@ -1544,6 +1543,11 @@ a.btn-begin {
 .btn-launch img {
 	opacity:0;
 }
+
+.rooftop-content {
+	position: absolute; top:35%; left:58%; width:22%;
+}
+.rooftop-content p { font-size:24px; line-height: 1.6; color:#fff;}
 
 /* Outspace Section */
 .dcc-space {

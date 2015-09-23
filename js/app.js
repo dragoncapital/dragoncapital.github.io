@@ -26,6 +26,11 @@ jQdcc(document).ready(function($){
 			}
 			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
 		}
+		if(state==5){
+			$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: -1, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
+		}else {
+			$('.launcher-content').empty();
+		}
 		if(state==6){
 			setTimeout(function(e){
 				$('.dcc-container').removeClass('launched');
@@ -63,7 +68,12 @@ jQdcc(document).ready(function($){
 				$('body').attr('data-state',state);
 				$('.dcc-nav').addClass('disabled');
 				$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
-			}			
+			}
+			if(state==5){
+				$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: -1, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
+			}else {
+				$('.launcher-content').empty();
+			}
 			setTimeout(function(e){
 				$('.dcc-nav').removeClass('disabled');
 			},2000);			
@@ -99,8 +109,7 @@ jQdcc(document).ready(function($){
 		$('.smoke-animation').css({'width':Math.round(nWx*0.3)+'px', 'height':Math.round(h*0.29296875)+'px', 'background-size':(Math.round(nWx*0.3)*10)+'px '+Math.round(h*0.29296875)+'px'});
 		$('.fire-animation').css({'width':Math.round(nWx*0.025)+'px', 'height':Math.round(h*0.29296875)+'px', 'background-size':(Math.round(nWx*0.025)*10)+'px '+Math.round(h*0.29296875)+'px'});
 		$('.rocket-smoke').css({'margin-left':'-'+(Math.round(nWx*0.3)/2)+'px'});
-		$('.rocket-fire').css({'margin-left':'-'+(Math.round(nWx*0.025)/2)+'px'})
-		$('.btn-launch').css({'margin-left':'-'+Math.round($('.btn-launch').width()/1.875)+'px'});
+		$('.rocket-fire').css({'margin-left':'-'+(Math.round(nWx*0.025)/2)+'px'});
 		$('.reveal-modal .hiring-content, .team-reveal-modal .details, .menu-items, .popup-content').perfectScrollbar('update');		
 	}
 
