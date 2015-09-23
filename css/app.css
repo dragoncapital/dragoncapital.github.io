@@ -2279,7 +2279,7 @@ a.btn-begin {
 	#dcc-lobby h2 { font-size:16px;}
 	#dcc-lobby p { font-size:12px; line-height: 1.4; margin:0 0 5px;}
 	#lobby-content {
-		top:10%; width:380px;
+		top:10%; width:370px;
 		margin-left:-190px;
 		left:50%;
 	}
