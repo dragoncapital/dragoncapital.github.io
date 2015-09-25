@@ -688,6 +688,7 @@ function initPopup(){
 		disableNav();
 		if(!$(this).parent().hasClass('active')){
 			$(this).parent().addClass('active');
+			updateUrl($(this).attr('href'));
 			$('body').append('<div class="team-reveal-bg"></div><div class="team-reveal-modal">'+$(this).parent().find('.popup-content').html()+'<a href="#" class="close-reveal">Click to close <span></span></a></div>');
 			$('.team-reveal-modal .details').perfectScrollbar();
 		}else {
