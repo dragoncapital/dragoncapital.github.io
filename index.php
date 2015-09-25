@@ -56,6 +56,7 @@
 		<link rel="stylesheet" type="text/css" href="css/app.css">
 	</head>
 	<body class="home <?php echo $phpstate;?>" data-state="0" data-page="<?php echo ($phpstate) ? array_search($phpstate, $phppage) : '-1';?>">
+		
 		<div class="dcc-preloader">
 			<div class="dp-animate"><img src="img/preload.gif"></div>
 			<div class="dp-container">
@@ -1233,7 +1234,7 @@
 													<p>Hi, we just came back to mother earth to spread what we have seen back in the future. What we are doing might not be something you have seen before.<br/>We know what you have thought.<br/>No, not that one, and not that one either.<br/>Curious?</p>
 												</div>
 												<div class="lobby-button-container">
-													<a href="/developer" class="btn-begin btn-meet-us rippling" title="Meet Us"><span><img src="img/meet-us-button.png" alt="Meet Us" width="100" height="100"></span></a>
+													<a href="/fangs" class="btn-begin btn-meet-us rippling" title="Meet Us"><span><img src="img/meet-us-button.png" alt="Meet Us" width="100" height="100"></span></a>
 													<a href="#watch-us" class="btn-begin btn-watch-us rippling" title="Watch Us"><span><img src="img/watch-us-button.png" alt="Watch Us" width="100" height="100"></span></a>
 												</div>
 
