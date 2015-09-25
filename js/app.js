@@ -2,7 +2,7 @@
 ;jQdcc = jQuery.noConflict();
 jQdcc(document).ready(function($){
 	var w,h,state;
-	var stateArray = ['home','lobby','developer','creative','illustrator','rooftop','outspace'];
+	var stateArray = ['home','about','fangs','brains','eyes','rooftop','career'];
 	var dccLobby, dccDeveloper, dccCreative, dccIllustrator, dccRooftop, dccOutspace;
 
 	var sw;
@@ -21,6 +21,7 @@ jQdcc(document).ready(function($){
 			$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 			state++;
 			$('body').attr('data-state',state);
+			updateUrl('/'+stateArray[state]);
 			$('.dcc-nav').addClass('disabled');
 			if(state==6){
 				$('.dcc-container').addClass('launched');
@@ -53,6 +54,7 @@ jQdcc(document).ready(function($){
 			$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 			state--;
 			$('body').attr('data-state',state);
+			updateUrl('/'+stateArray[state]);
 			$('.dcc-nav').addClass('disabled');
 			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
 		}
@@ -63,7 +65,8 @@ jQdcc(document).ready(function($){
 	}
 	function gotoPage(page){
 		var cState = state;
-		if(state!=page){			
+		if(state!=page){
+			updateUrl('/'+stateArray[page]);	
 			state=page;
 			if(page<7){
 				$('body').attr('data-state',state);
@@ -154,7 +157,6 @@ jQdcc(document).ready(function($){
 			e.preventDefault();
 			var ps = $(this).data('page');
 			if(!$('.dcc-nav').hasClass('disabled')){
-				updateUrl($(this).attr('href'));
 				gotoPage(ps);
 			}		
 		})
@@ -716,6 +718,7 @@ function initReveal(){
 	$('.dragon-hiring > a').on('click', function(e){
 		e.preventDefault();
 		var $this_id = $(this).data('dragon-id');
+		updateUrl($(this).attr('href'));
 		$('body').append('<div class="reveal-bg" href="#close"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="top:100px">'+$(this).parent().find('.reveal').html()+'<a href="#close" class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
 		disableNav(); 
