@@ -792,8 +792,8 @@ body.home .dcc-nav {
 	transition-timing-function:cubic-bezier(.48, 0, .8, .28);
 }
 .dcc-container.skip-transition {
-	-webkit-transition: none;
-	transition: none;
+	-webkit-transition: none !important;
+	transition: none !important;
 }
 .floor-separator {
 	height: 50px;
@@ -1832,7 +1832,7 @@ a.btn-begin {
 	cursor:pointer;
 }
 .team-reveal-modal .close-reveal span {
-	display: inline-block; width:26px; height:26px; background: url(../img/dragon-button.png) no-repeat center; background-size:cover; margin-left:5px; vertical-align: middle; transform:rotate(45deg);
+	display: inline-block; width:26px; height:26px; background: url(../img/dragon-button.png) no-repeat center; background-size:cover; margin-left:5px; vertical-align: middle; -webkit-transform:rotate(45deg); transform:rotate(45deg);
 	cursor:pointer;
 }
 

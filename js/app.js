@@ -5,6 +5,8 @@ jQdcc(document).ready(function($){
 	var stateArray = ['home','lobby','developer','creative','illustrator','rooftop','outspace'];
 	var dccLobby, dccDeveloper, dccCreative, dccIllustrator, dccRooftop, dccOutspace;
 
+	var sw;
+
 	function calcY(s){
 		var scrollY = 0;
 		if(s<=5){
@@ -16,6 +18,7 @@ jQdcc(document).ready(function($){
 	}
 	function nextPage(){
 		if(state<6){
+			$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 			state++;
 			$('body').attr('data-state',state);
 			$('.dcc-nav').addClass('disabled');
@@ -27,7 +30,7 @@ jQdcc(document).ready(function($){
 			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
 		}
 		if(state==5){
-			$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: -1, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
+			$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: 0, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
 		}else {
 			$('.launcher-content').empty();
 		}
@@ -43,12 +46,11 @@ jQdcc(document).ready(function($){
 				$('.dcc-nav').removeClass('disabled');
 			},2000);
 		}
-		
-		$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 		checkState();
 	}
 	function prevPage(){
 		if(state>1){
+			$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 			state--;
 			$('body').attr('data-state',state);
 			$('.dcc-nav').addClass('disabled');
@@ -57,7 +59,6 @@ jQdcc(document).ready(function($){
 		setTimeout(function(e){
 			$('.dcc-nav').removeClass('disabled');
 		},2000);
-		$('body, .dcc-nav, .top-nav').removeClass(stateArray[state-1]).addClass(stateArray[state]);
 		checkState();
 	}
 	function gotoPage(page){
@@ -70,7 +71,7 @@ jQdcc(document).ready(function($){
 				$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
 			}
 			if(state==5){
-				$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: -1, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
+				$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: 0, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
 			}else {
 				$('.launcher-content').empty();
 			}
@@ -80,6 +81,27 @@ jQdcc(document).ready(function($){
 			$('body, .dcc-nav, .top-nav').removeClass(stateArray[cState]).addClass(stateArray[state]);
 			checkState();
 		}
+	}
+	function skipPage(page){
+		$('#header').show();
+		$('.dcc-container').addClass('skip-transition');		
+		state=page;
+		if(page<7){
+			$('body').attr('data-state',state);
+			$('.dcc-nav').addClass('disabled');
+			$('.dcc-container').css({'transform':'translateY('+calcY(state)+'px)'});
+		}
+		if(state==5){
+			$('.launcher-content').typed({	strings:["Press the launcher button beside <br/> ^1000 and see what's your future can be."], startDelay:1000,	loop:true, backSpeed: 0, backDelay:1000,	typeSpeed: 1, callback: function(e){}});
+		}else {
+			$('.launcher-content').empty();
+		}
+		setTimeout(function(e){
+			$('.dcc-nav').removeClass('disabled');
+			$('.dcc-container').removeClass('skip-transition');		
+		},3000);			
+		$('body, .dcc-nav, .top-nav').removeClass('home').addClass(stateArray[state]);
+		checkState();
 	}
 	function refreshPage(page){
 		
@@ -132,6 +154,7 @@ jQdcc(document).ready(function($){
 			e.preventDefault();
 			var ps = $(this).data('page');
 			if(!$('.dcc-nav').hasClass('disabled')){
+				updateUrl($(this).attr('href'));
 				gotoPage(ps);
 			}		
 		})
@@ -163,7 +186,6 @@ jQdcc(document).ready(function($){
 			$('#dcc-lobby .drag-background img').attr('src', $('#dcc-lobby .drag-background img').data('src')); //1024
 		}
 
-		initImagesLoaded();
 
 		$('.logo a').on('click', function(e){
 			e.preventDefault();
@@ -231,12 +253,38 @@ jQdcc(document).ready(function($){
 			$('body').get(0).offsetHeight; 
 			$('body').show();
 		});
+
+		sw = $('body').data('page');
+		if(sw != '-1') {
+			$('#dcc-intro').remove();
+			initLobby();
+			if(sw==0){
+				skipPage(1);
+			}else if(sw==1){
+				gotoPage(2);
+			}else if(sw==2){
+				skipPage(3);
+			}
+			else if(sw==3){
+				skipPage(4);
+			}
+			else if(sw==4){
+				skipPage(5);
+			}
+			else if(sw==5){
+				skipPage(6);
+			}
+			d = 3000;
+		}
+		var d = 500;
+		initImagesLoaded(d);
 	}
 	
 	function start(){
 		$('.start-now').on('click', function(e){
 			e.preventDefault();
 			state=1;
+			updateUrl($(this).attr('href'));
 			var initScroll = ((h*(6-state))+(50*(5-state))+(2*h))*-1;
 			$('.dcc-container').css({'transform':'translateY('+initScroll+'px)'});
 			initLobby();
@@ -259,7 +307,6 @@ jQdcc(document).ready(function($){
 							$(this).hide();
 							$('.normal-typed').hide();
 							$('.skip-typed').show();
-
 							$('.lobby-button-container').addClass('active');
 						});
 						$('.paragraph').typed({	strings:["Hi, ^500 we just came back to mother earth to spread what we have seen back in the future. ^700 What we are doing might not be something you have seen before. ^700 <br/>We know what you have thought.<br/> ^1000 No, ^200 not that one, ^1000 and not that one either. ^900 <br/>Curious?"], startDelay:500,	loop:false,	typeSpeed: 2, callback: function(e){$('.skip-typed-button').hide();$('.lobby-button-container').addClass('active');}});
@@ -512,7 +559,7 @@ function initOutspace(){
 		$('#preload-outspace span').html(curProgress+'%');
 	}).done(function(e){
 		var outspaceStartX = (($('.draggable-normal').width() - w)/2)*-1;
-		// dccOutspace = new IScroll('#dcc-outspace', { scrollX: true, scrollY: false, mouseWheel: true, mouseWheelSpeed:10, deceleration:0.01, scrollbars: false, preventDefaultException: { tagName: /^(INPUT|TEXTAREA|BUTTON|SELECT|A|P)$/ }, startX:outspaceStartX, preventDefault:false});
+		
 		$('.top-nav li.f6 a span.enabled').css('width','100%');
 		$('#preload-outspace').fadeOut(250);
 		initParallax();
@@ -599,16 +646,23 @@ function checkImagesLoaded(){
 		$(e).css({'animation':'planetarium 4000ms '+Math.floor((Math.random() * 500) + 200)+'ms'+' infinite cubic-bezier(0.455, 0.03, 0.515, 0.955)'});
 	});
 }
-function initImagesLoaded(){
+function initImagesLoaded(delay){
+	var d = 500;
+	if(delay) d =delay;
 	var valProgress = 0;
 	$('#dcc-intro, #header, #dcc-lobby').imagesLoaded().progress(function(e){
 		var imgLen = e.images.length;
 		valProgress++;
 		setProgress(valProgress,imgLen);
 	}).done(function(e){
-		$('.dcc-preloader').fadeOut(300);
-		checkImagesLoaded();
-		$('.predcc-zeppelin').addClass("dcc-zeppelin");
+		setTimeout(function(e){
+			if(sw=='-1') {
+				$('.dcc-preloader').fadeOut(300);
+			}
+			checkImagesLoaded();
+			$('.predcc-zeppelin').addClass("dcc-zeppelin");
+		}, delay)
+		
 	});
 }
 function setProgress(valProgress,imgLen){
@@ -624,7 +678,6 @@ function loadHQ(){
 		$(newEl).appendTo($(e).parent('.drag-background'));
 		$(newEl).on('load', function(e){
 			resizeRes();
-
 		})
 	});
 }
@@ -675,35 +728,44 @@ function initReveal(){
 		})
 	});
 }
-
 function injectSrc(el){
 	if(h <= 400 && w < 1024){
-			el.attr('src', el.data('mobile')); //400
-		}else if(h <= 600 && h > 400 && w < 1024){
-		el.attr('src', el.data('tablet')); //600
+		el.attr('src', el.data('mobile'));
+	}else if(h <= 600 && h > 400 && w < 1024){
+		el.attr('src', el.data('tablet'));
 	}else if(h <= 800 && h > 600){
-			el.attr('src', el.data('medium')); //800
-		}else {
-			el.attr('src', el.data('src')); //1024
-		}
+		el.attr('src', el.data('medium'));
+	}else {
+		el.attr('src', el.data('src'));
 	}
+}
 
-	function initCentered(){
-		$('.centered-content').each(function(i,e){
-		});
+function updateUrl(url){
+	if($('html').hasClass('history')){
+		var queryParameters = {}, queryString = location.pathname.split('/');
+		//location.pathname = '/github/dragoncapital.github.io'+url;
+		url = '/github/dragoncapital.github.io'+url;
+		history.pushState('', '', url);
 	}
-	function initEsc(){
-		$(document).keydown(function(e) {
-			if (e.keyCode == 27) {
-				if($('body').hasClass('disable-nav')){
-					e.preventDefault();
-					$('.dragon').removeClass('active');
-					$('body').find('.reveal-bg, .team-reveal-bg').remove();
-					$('body').find('.reveal-modal, .team-reveal-modal').remove();
-					enableNav();
-				}
+}
+
+
+function initCentered(){
+	$('.centered-content').each(function(i,e){
+	});
+}
+function initEsc(){
+	$(document).keydown(function(e) {
+		if (e.keyCode == 27) {
+			if($('body').hasClass('disable-nav')){
+				e.preventDefault();
+				$('.dragon').removeClass('active');
+				$('body').find('.reveal-bg, .team-reveal-bg').remove();
+				$('body').find('.reveal-modal, .team-reveal-modal').remove();
+				enableNav();
 			}
-		});
-	}
-	init();
+		}
+	});
+}
+init();
 });
