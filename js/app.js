@@ -226,15 +226,19 @@ jQdcc(document).ready(function($){
 
 		$('.btn-watch-us').on('click', function(e){
 			e.preventDefault();
-			$('.wp-container').html('<div class="flex-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZW6Fs-YaW9Y" frameborder="0" allowfullscreen></iframe></div><a href="#" class="wp-btnclose"></a>');
-			$('.watchus-popup').removeClass('deactive');
-			$('.watchus-popup').addClass('active');
+            $('.wp-wrapper').addClass('slide');
+            $('.watchus-popup').removeClass('deactive').addClass('active');
+            setTimeout(function(){
+                $('.wp-container').html('<div class="flex-video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZW6Fs-YaW9Y" frameborder="0" allowfullscreen></iframe></div><a href="#" class="wp-btnclose"></a>');
+            },150);
 		});
 		$('.watchus-popup, .wp-btnclose').on('click', function(e){
 			e.preventDefault();
-			$('.wp-container').html('');
-			$('.watchus-popup').removeClass('active');
-			$('.watchus-popup').addClass('deactive');
+            $('.wp-wrapper').removeClass('slide');
+			$('.watchus-popup').removeClass('active').addClass('deactive');
+            setTimeout(function(){
+                $('.wp-container').html('');
+            },150);
 		});
 
 		resizeRes();
@@ -693,14 +697,18 @@ function initPopup(){
 			updateUrl($(this).attr('href'));
 			$('body').append('<div class="team-reveal-bg"></div><div class="team-reveal-modal">'+$(this).parent().find('.popup-content').html()+'<a href="#" class="close-reveal">Click to close <span></span></a></div>');
 			$('.team-reveal-modal .details').perfectScrollbar();
+            $('.team-reveal-modal').addClass('slide-in');
 		}else {
 			$('.dragon').removeClass('active');
 			enableNav();			
 		}
 		$('body').find('.team-reveal-modal a.close-reveal, .team-reveal-bg').on('click', function(e){
 			e.preventDefault();
-			$('body').find('.team-reveal-bg').remove();
-			$('body').find('.team-reveal-modal').remove();
+			$('.team-reveal-modal').removeClass('slide-in');
+            setTimeout(function(){
+                $('body').find('.team-reveal-bg').remove();
+                $('body').find('.team-reveal-modal').remove();
+            },150);
 			$('.dragon').removeClass('active');
 			enableNav();
 		});
@@ -721,13 +729,19 @@ function initReveal(){
 		updateUrl($(this).attr('href'));
 		$('body').append('<div class="reveal-bg" href="#close"></div><div wanted-id="'+$this_id+'" class="reveal-modal" style="top:100px">'+$(this).parent().find('.reveal').html()+'<a href="#close" class="close-reveal">Click to close <span></span></a></div>');
 		$('.reveal-modal .hiring-content').perfectScrollbar();
+        $('.reveal-bg').css({"opacity": "1"});
+        $('.reveal-modal').addClass('slide-in');
 		disableNav(); 
 
 		$('body').find('.reveal-modal a.close-reveal, .reveal-bg').on('click', function(e){
 			e.stopPropagation();
 			e.preventDefault();
-			$('body').find('.reveal-bg').remove();
-			$('body').find('.reveal-modal').remove();
+			$('.reveal-bg').css({"opacity": "0"});
+            $('.reveal-modal').removeClass('slide-in');
+            setTimeout(function(){
+                $('body').find('.reveal-bg').remove();
+                $('body').find('.reveal-modal').remove();
+            },150);
 			enableNav();
 		})
 	});
