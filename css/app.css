@@ -1179,6 +1179,7 @@ a.btn-begin {
 .flex-video iframe,.flex-video object,.flex-video embed,.flex-video video{height:100%;position:absolute;top:0;width:100%;left:0}.keystroke,kbd{background-color:#ededed;border-color:#ddd;color:#222;border-style:solid;border-width:1px;font-family:"Consolas","Menlo","Courier",monospace;font-size:inherit;margin:0;padding:0.125rem 0.25rem 0;border-radius:4px}
 
 .watchus-popup {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1187,35 +1188,18 @@ a.btn-begin {
 	height: 100%;
 	z-index: 98;
 	cursor:pointer;
-    -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-    opacity: 0;
-    visibility: hidden;
 }
 .watchus-popup.active {    
-	opacity: 1;
-    visibility: visible;
+	display: block;
 }
 .watchus-popup.deactive {    
-	opacity: 0;
-    visibility: hidden;
+	display: none;
 }
 .wp-wrapper {
 	width: 50%;
 	height: 100%;
 	margin:100px auto 0;
 	position: relative;
-    -webkit-transform: translateY(-20%);
-	transform: translateY(-20%);
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-}
-.wp-wrapper.slide {
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-	opacity: 1;
 }
 .wp-container {
 	width: 100%;
@@ -1723,10 +1707,6 @@ a.btn-begin {
 	bottom: 0;
 	content: "";
 	cursor:pointer;
-    -webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-    opacity: 0;
 }
 .reveal-modal {
 	position: fixed;
@@ -1742,16 +1722,6 @@ a.btn-begin {
 	border-radius: 24px 4px 24px 24px;
 	-webkit-box-shadow: 0 0 4px #000;
 	box-shadow: 0 0 4px #000;
-    -webkit-transform: translateY(-20%);
-	transform: translateY(-20%);
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-}
-.reveal-modal.slide-in {
-    -webkit-transform: translateY(0);
-	transform: translateY(0);
-	opacity: 1;
 }
 .reveal-modal a {
 	color: #000;
@@ -2139,17 +2109,7 @@ a.btn-begin {
 	}
 	.team-reveal-modal {
 		display: block;
-        -webkit-transform: translateY(-20%);
-        transform: translateY(-20%);
-        opacity: 0;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
 	}
-    .team-reveal-modal.slide-in {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
 	.popup-content { display: none;}
 	.dragon.active a { display: none;}
 	.team-reveal-modal {
@@ -2222,18 +2182,6 @@ a.btn-begin {
 		overflow-y:scroll;
 	}
 	.team-reveal-modal:after { clear:both; display: table; content:"";}
-    .team-reveal-modal {
-        -webkit-transform: translateY(-20%);
-        transform: translateY(-20%);
-        opacity: 0;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-    }
-    .team-reveal-modal.slide-in {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-        opacity: 1;
-    }
 
 	.reveal-modal {
 		position: absolute; top:0; right:0; bottom:0; left:0;
